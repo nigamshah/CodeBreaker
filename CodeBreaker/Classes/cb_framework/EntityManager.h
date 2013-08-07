@@ -27,6 +27,10 @@ namespace codebreaker {
 
 		static void deleteAllEntities();
 
+		static void sendMessageToEntity(std::string eid, std::string message, cocos2d::CCObject* sender, void* data);
+
+		static void sendMessageToAllEntities(std::string message, cocos2d::CCObject* sender, void* data);
+
 	private:
 		static Entity* addEntity(std::string eid, Entity* ent);
 		typedef std::map<std::string, codebreaker::Entity*> EntityMap;

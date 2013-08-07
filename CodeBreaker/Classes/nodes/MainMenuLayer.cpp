@@ -7,6 +7,10 @@
 //
 
 #include "MainMenuLayer.h"
+#include "EntityManager.h"
+
+using namespace codebreaker;
+
 MainMenuLayer::~MainMenuLayer() {
 
 }
@@ -25,23 +29,23 @@ bool MainMenuLayer::init()
 	//    you may modify it.
 
 	// add a "start" icon to start the game. it's an autorelease object
-	CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
+	CCMenuItemImage *pStartItem = CCMenuItemImage::create(
 														  "CloseNormal.png",
 														  "CloseSelected.png",
 														  this,
 														  menu_selector(MainMenuLayer::startGameCallback) );
 
-	pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 50) );
+	pStartItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 100) );
 
 
 	// add a "close" icon to exit the progress. it's an autorelease object
-	CCMenuItemImage *pStartItem = CCMenuItemImage::create(
+	CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
 														  "CloseNormal.png",
 														  "CloseSelected.png",
 														  this,
 														  menu_selector(MainMenuLayer::menuCloseCallback) );
 
-	pStartItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
+	pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
 
 	// create menu, it's an autorelease object
 	CCMenu* pMenu = CCMenu::create(pStartItem, pCloseItem, NULL);
@@ -79,8 +83,7 @@ bool MainMenuLayer::init()
 
 void MainMenuLayer::startGameCallback(CCObject* pSender) {
 	CCLog("Start Game Event HERE !!!!");
-//	ESEvent* pEvt = ESEvent::createWithData("StartGame", this);
-//	pEvt->post();
+	EntityManager::sendMessageToEntity("main", "startGameClicked", this, nullptr);
 }
 
 void MainMenuLayer::menuCloseCallback(CCObject* pSender)

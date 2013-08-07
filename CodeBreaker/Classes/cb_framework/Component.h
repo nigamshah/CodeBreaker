@@ -27,9 +27,8 @@ namespace codebreaker {
 		std::map<std::string, MessageHandlerList*> _messageHandlerMap;
 
 		void _subscribe(std::string message, MessageHandler messageHandler, std::string handlerToken);
+
 		void _unsubscribe(std::string message, std::string handlerToken);
-
-
 
 	public:
 		CC_SYNTHESIZE(bool, _updateEnabled, UpdateEnabled);

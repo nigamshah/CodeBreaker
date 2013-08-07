@@ -8,6 +8,7 @@
 
 #include "EntityFactory.h"
 #include "MainController.h"
+#include "SceneManager.h"
 
 using namespace codebreaker;
 
@@ -17,8 +18,13 @@ EntityFactory::FactoryMap EntityFactory::s_factoryMap = {
 
 Entity* EntityFactory::createMainEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
+
 	Component* comp = MainController::create();
 	ent->addComponentToEntity(comp);
+
+	comp = SceneManager::create();
+	ent->addComponentToEntity(comp);
+	
 	return ent;
 }
 

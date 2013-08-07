@@ -40,3 +40,21 @@ Entity* EntityManager::getEntity(std::string eid) {
 	Entity* ent = s_entitiesById[eid];
 	return ent;
 }
+
+
+void EntityManager::sendMessageToEntity(std::string eid, std::string message, cocos2d::CCObject* sender, void* data) {
+	Message* msgObj = new Message(message, sender, data);
+	Entity* ent = getEntity(eid);
+	if (ent) {
+		ent->sendMessage(message, msgObj);
+	} else {
+		cocos2d::CCLog("No Entity with eid = %s", eid.c_str());
+	}
+}
+void EntityManager::sendMessageToAllEntities(std::string message, cocos2d::CCObject* sender, void* data) {
+	Message* msgObj = new Message(message, sender, data);
+	for (auto& pr : s_entitiesById) {
+		Entity* ent = pr.second;
+		ent->sendMessage(message, msgObj);
+	}
+}

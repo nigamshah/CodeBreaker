@@ -287,6 +287,8 @@
 		3672364417B04C280097E3F1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364217B04C280097E3F1 /* Entity.cpp */; };
 		3672364717B04CE30097E3F1 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364517B04CE20097E3F1 /* Component.cpp */; };
 		3683432817B28C74006A8EFE /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432417B28C74006A8EFE /* MainController.cpp */; };
+		3683432B17B28CD4006A8EFE /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432917B28CD4006A8EFE /* SceneManager.cpp */; };
+		3683432F17B29128006A8EFE /* MainGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432D17B29128006A8EFE /* MainGameLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -894,6 +896,11 @@
 		3672364617B04CE20097E3F1 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
 		3683432417B28C74006A8EFE /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
 		3683432517B28C74006A8EFE /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		3683432917B28CD4006A8EFE /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
+		3683432A17B28CD4006A8EFE /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
+		3683432C17B28D6E006A8EFE /* codebreaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = codebreaker.h; sourceTree = "<group>"; };
+		3683432D17B29128006A8EFE /* MainGameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainGameLayer.cpp; sourceTree = "<group>"; };
+		3683432E17B29128006A8EFE /* MainGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGameLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2137,6 +2144,7 @@
 				362C501917B14AA800185A0F /* EntityFactory.cpp */,
 				362C501A17B14AA800185A0F /* EntityFactory.h */,
 				362C501D17B16FDF00185A0F /* Message.h */,
+				3683432C17B28D6E006A8EFE /* codebreaker.h */,
 			);
 			name = cb_framework;
 			path = Classes/cb_framework;
@@ -2147,6 +2155,8 @@
 			children = (
 				3672363917B049830097E3F1 /* MainMenuLayer.cpp */,
 				3672363A17B049830097E3F1 /* MainMenuLayer.h */,
+				3683432D17B29128006A8EFE /* MainGameLayer.cpp */,
+				3683432E17B29128006A8EFE /* MainGameLayer.h */,
 			);
 			name = nodes;
 			path = Classes/nodes;
@@ -2186,6 +2196,8 @@
 			children = (
 				3683432417B28C74006A8EFE /* MainController.cpp */,
 				3683432517B28C74006A8EFE /* MainController.h */,
+				3683432917B28CD4006A8EFE /* SceneManager.cpp */,
+				3683432A17B28CD4006A8EFE /* SceneManager.h */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -2533,6 +2545,8 @@
 				3672364717B04CE30097E3F1 /* Component.cpp in Sources */,
 				362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */,
 				3683432817B28C74006A8EFE /* MainController.cpp in Sources */,
+				3683432B17B28CD4006A8EFE /* SceneManager.cpp in Sources */,
+				3683432F17B29128006A8EFE /* MainGameLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

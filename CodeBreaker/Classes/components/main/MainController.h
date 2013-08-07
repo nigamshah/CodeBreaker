@@ -9,10 +9,7 @@
 #ifndef __CodeBreaker__MainController__
 #define __CodeBreaker__MainController__
 
-#include "cocos2d.h"
-#include "Component.h"
-#include "EntityManager.h"
-#include "Message.h"
+#include "codebreaker.h"
 
 namespace codebreaker {
 	class MainController : public Component {

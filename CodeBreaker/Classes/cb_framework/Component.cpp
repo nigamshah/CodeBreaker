@@ -18,7 +18,6 @@ bool Component::init() {
 	return true;
 }
 
-
 void Component::_subscribe(std::string message, MessageHandler messageHandler, std::string handlerToken) {
 
 	_unsubscribe(message, handlerToken);

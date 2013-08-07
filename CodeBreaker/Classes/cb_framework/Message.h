@@ -18,12 +18,12 @@ namespace codebreaker {
 	class Message {
 	private:
 		std::string _name;
-		Component* _sender;
+		cocos2d::CCObject* _sender;
 		void* _data;
 
 	public:
 
-		Message(std::string name, Component* sender, void* data) {
+		Message(std::string name, cocos2d::CCObject* sender, void* data) {
 			_name = name;
 			_sender = sender;
 			_data = data;
@@ -35,8 +35,13 @@ namespace codebreaker {
 		}
 
 		std::string getName() const { return _name; }
-		Component* getSender() const { return _sender; }
+		cocos2d::CCObject* getSender() const { return _sender; }
 		void* getData() const { return _data; }
+		template<class T>
+		T getData() {
+			T result = static_cast<T>(_data);
+			return result;
+		}
 
 	};
 }

@@ -13,23 +13,25 @@
 
 using namespace cocos2d;
 
-class MainMenuLayer : public CCLayer
-{
+namespace codebreaker {
+	class MainMenuLayer : public CCLayer
+	{
 
-public:
-	~MainMenuLayer(void);
+	public:
+		~MainMenuLayer(void);
 
-    // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
-    virtual bool init();
+		// Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
+		virtual bool init();
 
 
-    // selector callbacks
-    void startGameCallback(CCObject* pSender);
-	void menuCloseCallback(CCObject* pSender);
+		// selector callbacks
+		void startGameCallback(CCObject* pSender);
+		void menuCloseCallback(CCObject* pSender);
 
-    // preprocessor macro for "static create()" constructor ( node() deprecated )
-    CREATE_FUNC(MainMenuLayer);
-	
-};
+		// preprocessor macro for "static create()" constructor ( node() deprecated )
+		CREATE_FUNC(MainMenuLayer);
+
+	};
+}
 
 #endif /* defined(__CodeBreaker__MainMenuLayer__) */
