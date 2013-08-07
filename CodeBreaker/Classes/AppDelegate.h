@@ -10,6 +10,8 @@
 #define  _APP_DELEGATE_H_
 
 #include "CCApplication.h"
+#include "EntityManager.h"
+
 
 /**
 @brief    The cocos2d Application.
@@ -18,6 +20,9 @@ The reason to implement with private inheritance is to hide some interface detai
 */
 class  AppDelegate : private cocos2d::CCApplication
 {
+private:
+	//codebreaker::MainController _mainController;
+
 public:
     AppDelegate();
     virtual ~AppDelegate();

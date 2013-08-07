@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362C501817B14A5C00185A0F /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 362C501617B14A5C00185A0F /* MainController.cpp */; };
+		362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 362C501917B14AA800185A0F /* EntityFactory.cpp */; };
 		3672327E17B047230097E3F1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672327D17B047230097E3F1 /* QuartzCore.framework */; };
 		3672328017B047230097E3F1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672327F17B047230097E3F1 /* OpenGLES.framework */; };
 		3672328217B047230097E3F1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672328117B047230097E3F1 /* OpenAL.framework */; };
@@ -279,10 +281,20 @@
 		3672361317B047290097E3F1 /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = 3672361217B047290097E3F1 /* cpVect.c */; };
 		3672361B17B047290097E3F1 /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672361A17B047290097E3F1 /* libwebsockets.a */; };
 		3672362117B047290097E3F1 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672362017B047290097E3F1 /* AppDelegate.cpp */; };
-		3672362417B047290097E3F1 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672362317B047290097E3F1 /* HelloWorldScene.cpp */; };
+		3672363017B047820097E3F1 /* game_images in Resources */ = {isa = PBXBuildFile; fileRef = 3672362F17B047820097E3F1 /* game_images */; };
+		3672363817B048F70097E3F1 /* TypeUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672363617B048F70097E3F1 /* TypeUtils.cpp */; };
+		3672363B17B049830097E3F1 /* MainMenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672363917B049830097E3F1 /* MainMenuLayer.cpp */; };
+		3672364117B04B280097E3F1 /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672363F17B04B280097E3F1 /* EntityManager.cpp */; };
+		3672364417B04C280097E3F1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364217B04C280097E3F1 /* Entity.cpp */; };
+		3672364717B04CE30097E3F1 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364517B04CE20097E3F1 /* Component.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		362C501617B14A5C00185A0F /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
+		362C501717B14A5C00185A0F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		362C501917B14AA800185A0F /* EntityFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityFactory.cpp; sourceTree = "<group>"; };
+		362C501A17B14AA800185A0F /* EntityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityFactory.h; sourceTree = "<group>"; };
+		362C501D17B16FDF00185A0F /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		3672327A17B047230097E3F1 /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3672327D17B047230097E3F1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3672327F17B047230097E3F1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -871,8 +883,17 @@
 		3672361D17B047290097E3F1 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		3672361F17B047290097E3F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		3672362017B047290097E3F1 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
-		3672362217B047290097E3F1 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		3672362317B047290097E3F1 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		3672362F17B047820097E3F1 /* game_images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = game_images; path = Resources/game_images; sourceTree = "<group>"; };
+		3672363617B048F70097E3F1 /* TypeUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TypeUtils.cpp; sourceTree = "<group>"; };
+		3672363717B048F70097E3F1 /* TypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeUtils.h; sourceTree = "<group>"; };
+		3672363917B049830097E3F1 /* MainMenuLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuLayer.cpp; sourceTree = "<group>"; };
+		3672363A17B049830097E3F1 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
+		3672363F17B04B280097E3F1 /* EntityManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityManager.cpp; sourceTree = "<group>"; };
+		3672364017B04B280097E3F1 /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		3672364217B04C280097E3F1 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		3672364317B04C280097E3F1 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		3672364517B04CE20097E3F1 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		3672364617B04CE20097E3F1 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -944,6 +965,7 @@
 		3672328E17B047230097E3F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3672362F17B047820097E3F1 /* game_images */,
 				3672328F17B047230097E3F1 /* CloseNormal.png */,
 				3672329117B047230097E3F1 /* CloseSelected.png */,
 				3672329317B047230097E3F1 /* Default.png */,
@@ -2093,12 +2115,61 @@
 		3672361E17B047290097E3F1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3672363217B048AB0097E3F1 /* cb_framework */,
+				3672363317B048AB0097E3F1 /* components */,
+				3672363417B048AB0097E3F1 /* nodes */,
+				3672363517B048AB0097E3F1 /* utils */,
 				3672361F17B047290097E3F1 /* AppDelegate.h */,
 				3672362017B047290097E3F1 /* AppDelegate.cpp */,
-				3672362217B047290097E3F1 /* HelloWorldScene.h */,
-				3672362317B047290097E3F1 /* HelloWorldScene.cpp */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		3672363217B048AB0097E3F1 /* cb_framework */ = {
+			isa = PBXGroup;
+			children = (
+				3672363F17B04B280097E3F1 /* EntityManager.cpp */,
+				3672364017B04B280097E3F1 /* EntityManager.h */,
+				3672364217B04C280097E3F1 /* Entity.cpp */,
+				3672364317B04C280097E3F1 /* Entity.h */,
+				3672364517B04CE20097E3F1 /* Component.cpp */,
+				3672364617B04CE20097E3F1 /* Component.h */,
+				362C501917B14AA800185A0F /* EntityFactory.cpp */,
+				362C501A17B14AA800185A0F /* EntityFactory.h */,
+				362C501D17B16FDF00185A0F /* Message.h */,
+			);
+			name = cb_framework;
+			path = Classes/cb_framework;
+			sourceTree = "<group>";
+		};
+		3672363317B048AB0097E3F1 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				362C501617B14A5C00185A0F /* MainController.cpp */,
+				362C501717B14A5C00185A0F /* MainController.h */,
+			);
+			name = components;
+			path = Classes/components;
+			sourceTree = "<group>";
+		};
+		3672363417B048AB0097E3F1 /* nodes */ = {
+			isa = PBXGroup;
+			children = (
+				3672363917B049830097E3F1 /* MainMenuLayer.cpp */,
+				3672363A17B049830097E3F1 /* MainMenuLayer.h */,
+			);
+			name = nodes;
+			path = Classes/nodes;
+			sourceTree = "<group>";
+		};
+		3672363517B048AB0097E3F1 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				3672363617B048F70097E3F1 /* TypeUtils.cpp */,
+				3672363717B048F70097E3F1 /* TypeUtils.h */,
+			);
+			name = utils;
+			path = Classes/utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2164,6 +2235,7 @@
 				367232A417B047230097E3F1 /* iTunesArtwork in Resources */,
 				3672334317B047240097E3F1 /* ChangeLog in Resources */,
 				367234B717B047260097E3F1 /* project.pbxproj in Resources */,
+				3672363017B047820097E3F1 /* game_images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2422,7 +2494,13 @@
 				3672361117B047290097E3F1 /* cpSweep1D.c in Sources */,
 				3672361317B047290097E3F1 /* cpVect.c in Sources */,
 				3672362117B047290097E3F1 /* AppDelegate.cpp in Sources */,
-				3672362417B047290097E3F1 /* HelloWorldScene.cpp in Sources */,
+				3672363817B048F70097E3F1 /* TypeUtils.cpp in Sources */,
+				3672363B17B049830097E3F1 /* MainMenuLayer.cpp in Sources */,
+				3672364117B04B280097E3F1 /* EntityManager.cpp in Sources */,
+				3672364417B04C280097E3F1 /* Entity.cpp in Sources */,
+				3672364717B04CE30097E3F1 /* Component.cpp in Sources */,
+				362C501817B14A5C00185A0F /* MainController.cpp in Sources */,
+				362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2433,8 +2511,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -2465,8 +2545,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					USE_FILE32API,
@@ -2564,6 +2646,7 @@
 				3672362917B047290097E3F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
