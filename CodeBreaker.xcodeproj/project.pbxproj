@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		362C501817B14A5C00185A0F /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 362C501617B14A5C00185A0F /* MainController.cpp */; };
 		362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 362C501917B14AA800185A0F /* EntityFactory.cpp */; };
 		3672327E17B047230097E3F1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672327D17B047230097E3F1 /* QuartzCore.framework */; };
 		3672328017B047230097E3F1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672327F17B047230097E3F1 /* OpenGLES.framework */; };
@@ -287,11 +286,10 @@
 		3672364117B04B280097E3F1 /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672363F17B04B280097E3F1 /* EntityManager.cpp */; };
 		3672364417B04C280097E3F1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364217B04C280097E3F1 /* Entity.cpp */; };
 		3672364717B04CE30097E3F1 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364517B04CE20097E3F1 /* Component.cpp */; };
+		3683432817B28C74006A8EFE /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432417B28C74006A8EFE /* MainController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		362C501617B14A5C00185A0F /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
-		362C501717B14A5C00185A0F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		362C501917B14AA800185A0F /* EntityFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityFactory.cpp; sourceTree = "<group>"; };
 		362C501A17B14AA800185A0F /* EntityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityFactory.h; sourceTree = "<group>"; };
 		362C501D17B16FDF00185A0F /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
@@ -894,6 +892,8 @@
 		3672364317B04C280097E3F1 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		3672364517B04CE20097E3F1 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		3672364617B04CE20097E3F1 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		3683432417B28C74006A8EFE /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
+		3683432517B28C74006A8EFE /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2115,8 +2115,8 @@
 		3672361E17B047290097E3F1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3683432117B28C74006A8EFE /* components */,
 				3672363217B048AB0097E3F1 /* cb_framework */,
-				3672363317B048AB0097E3F1 /* components */,
 				3672363417B048AB0097E3F1 /* nodes */,
 				3672363517B048AB0097E3F1 /* utils */,
 				3672361F17B047290097E3F1 /* AppDelegate.h */,
@@ -2142,16 +2142,6 @@
 			path = Classes/cb_framework;
 			sourceTree = "<group>";
 		};
-		3672363317B048AB0097E3F1 /* components */ = {
-			isa = PBXGroup;
-			children = (
-				362C501617B14A5C00185A0F /* MainController.cpp */,
-				362C501717B14A5C00185A0F /* MainController.h */,
-			);
-			name = components;
-			path = Classes/components;
-			sourceTree = "<group>";
-		};
 		3672363417B048AB0097E3F1 /* nodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -2170,6 +2160,48 @@
 			);
 			name = utils;
 			path = Classes/utils;
+			sourceTree = "<group>";
+		};
+		3683432117B28C74006A8EFE /* components */ = {
+			isa = PBXGroup;
+			children = (
+				3683432217B28C74006A8EFE /* board */,
+				3683432317B28C74006A8EFE /* main */,
+				3683432617B28C74006A8EFE /* shared */,
+				3683432717B28C74006A8EFE /* tile */,
+			);
+			name = components;
+			path = Classes/components;
+			sourceTree = "<group>";
+		};
+		3683432217B28C74006A8EFE /* board */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = board;
+			sourceTree = "<group>";
+		};
+		3683432317B28C74006A8EFE /* main */ = {
+			isa = PBXGroup;
+			children = (
+				3683432417B28C74006A8EFE /* MainController.cpp */,
+				3683432517B28C74006A8EFE /* MainController.h */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		3683432617B28C74006A8EFE /* shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		3683432717B28C74006A8EFE /* tile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2499,8 +2531,8 @@
 				3672364117B04B280097E3F1 /* EntityManager.cpp in Sources */,
 				3672364417B04C280097E3F1 /* Entity.cpp in Sources */,
 				3672364717B04CE30097E3F1 /* Component.cpp in Sources */,
-				362C501817B14A5C00185A0F /* MainController.cpp in Sources */,
 				362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */,
+				3683432817B28C74006A8EFE /* MainController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2583,6 +2615,7 @@
 				GCC_PREFIX_HEADER = CodeBreaker/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = CodeBreaker/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CodeBreaker/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -2609,6 +2642,7 @@
 				GCC_PREFIX_HEADER = CodeBreaker/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = CodeBreaker/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CodeBreaker/libs/cocos2dx/platform/third_party/ios/libraries\"",
