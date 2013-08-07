@@ -8,6 +8,7 @@
 
 #include "Component.h"
 #include "Entity.h"
+#include "EntityManager.h"
 
 using namespace codebreaker;
 
@@ -46,14 +47,30 @@ void Component::_unsubscribe(std::string message, std::string handlerToken) {
 	}
 }
 
-void Component::sendMessage(std::string message) {
-	sendMessage(message, nullptr);
+void Component::sendLocalMessage(std::string message) {
+	sendLocalMessage(message, nullptr);
 }
 
-void Component::sendMessage(std::string message, void* data) {
+void Component::sendLocalMessage(std::string message, void* data) {
 	Message* msgObj = new Message(message, this, data);
-	_entity->sendMessage(message, msgObj);
+	_entity->sendLocalMessage(message, msgObj);
 	delete msgObj;
+}
+
+void Component::sendMessageToEntity(std::string eid, std::string message) {
+	sendMessageToEntity(eid, message, nullptr);
+}
+
+void Component::sendMessageToEntity(std::string eid, std::string message, void* data) {
+	EntityManager::sendMessageToEntity(eid, message, this, data);
+}
+
+void Component::sendGlobalMessage(std::string message) {
+	sendGlobalMessage(message, nullptr);
+}
+
+void Component::sendGlobalMessage(std::string message, void* data) {
+	EntityManager::sendMessageToAllEntities(message, this, data);
 }
 
 void Component::handleMessage(std::string message, Message& messageObj) {

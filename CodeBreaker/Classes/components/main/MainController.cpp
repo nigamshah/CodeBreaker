@@ -30,7 +30,7 @@ void MainController::_testHandler(Message& msg) {
 	cocos2d::CCLog("msg received, message = %s", msg.getName().c_str());
 //	cocos2d::CCLog("data = %s", msg.getData<string*>()->c_str());
 	string* s = new string("Game");
-	sendMessage("switchScene", s);
+	sendLocalMessage("switchScene", s);
 	delete s;
 }
 
@@ -40,9 +40,7 @@ void MainController::_awakeTests() {
 void MainController::_startTests() {
 
 	std::string* s = new std::string("Hello World");
-
-	sendMessage("TestHandlerSystem", s);
-
+	sendLocalMessage("TestHandlerSystem", s);
 	delete s;
 	
 }

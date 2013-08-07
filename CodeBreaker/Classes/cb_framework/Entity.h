@@ -45,7 +45,7 @@ namespace codebreaker {
 		template <class T> bool hasComponentOfType();
 		bool hasComponentOfType(std::string typeName);
 
-		void sendMessage(std::string message, Message* messageObj);
+		void sendLocalMessage(std::string message, Message* messageObj);
 
 
 

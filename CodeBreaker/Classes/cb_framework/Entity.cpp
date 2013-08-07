@@ -87,7 +87,7 @@ bool Entity::hasComponentOfType(std::string typeName) {
 // Messages
 //////////////////////////////
 
-void Entity::sendMessage(std::string message, Message* messageObj) {
+void Entity::sendLocalMessage(std::string message, Message* messageObj) {
 	for (auto& pr : _componentsByType) {
 		for (Component* comp : *pr.second) {
 			if (comp->getMessagesEnabled()) {

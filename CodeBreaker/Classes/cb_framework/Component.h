@@ -27,7 +27,6 @@ namespace codebreaker {
 		std::map<std::string, MessageHandlerList*> _messageHandlerMap;
 
 		void _subscribe(std::string message, MessageHandler messageHandler, std::string handlerToken);
-
 		void _unsubscribe(std::string message, std::string handlerToken);
 
 	public:
@@ -40,8 +39,14 @@ namespace codebreaker {
 		virtual void start() {};
 		virtual void update(float dt) {};
 
-		void sendMessage(std::string message);
-		void sendMessage(std::string message, void* data);
+		void sendLocalMessage(std::string message);
+		void sendLocalMessage(std::string message, void* data);
+
+		void sendMessageToEntity(std::string eid, std::string message);
+		void sendMessageToEntity(std::string eid, std::string message, void* data);
+
+		void sendGlobalMessage(std::string message);
+		void sendGlobalMessage(std::string message, void* data);
 		
 		void handleMessage(std::string message, Message& messageObj);
 	};
