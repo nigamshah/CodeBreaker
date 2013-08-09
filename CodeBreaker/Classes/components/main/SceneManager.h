@@ -16,13 +16,20 @@ namespace codebreaker {
 	private:
 
 		CCScene* _mainMenuScene;
-		CCScene* _gameScene;
+		CCScene* _gameplayScene;
 		CCScene* _gameOverScene;
+		CCScene* _currentScene;
 
 		CCScene* _createScene(CCLayer* pLayer);
 
-		void switchScene(Message& msg);
+		void _switchSceneHandler(Message& msg);
 		void _switchScene(CCScene* pScene);
+
+		void _addChildToSceneHandler(Message& msg);
+		void _addChildToScene(CCNode* node);
+
+		void _removeChildFromSceneHandler(Message& msg);
+		void _removeChildFromScene(CCNode* node);
 
 	public:
 

@@ -83,7 +83,7 @@ bool MainMenuLayer::init()
 
 void MainMenuLayer::startGameCallback(CCObject* pSender) {
 	CCLog("Start Game Event HERE !!!!");
-	EntityManager::sendMessageToEntity("main", "startGameClicked", this, nullptr);
+	EntityManager::sendMessageToEntity("main", "startGame", this, nullptr);
 }
 
 void MainMenuLayer::menuCloseCallback(CCObject* pSender)

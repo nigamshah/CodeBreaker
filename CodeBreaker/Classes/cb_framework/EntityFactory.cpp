@@ -10,11 +10,15 @@
 #include "MainController.h"
 #include "SceneManager.h"
 #include "GameModeMachine.h"
+#include "GameSpriteComponent.h"
+#include "BoardFactory.h"
 
 using namespace codebreaker;
 
 EntityFactory::FactoryMap EntityFactory::s_factoryMap = {
-	{ "Main", &EntityFactory::createMainEntity}
+	{ "Main", &EntityFactory::createMainEntity},
+	{ "Board", &EntityFactory::createBoardEntity},
+	{ "Cell", &EntityFactory::createCellEntity}
 };
 
 Entity* EntityFactory::createMainEntity(std::string eid) {
@@ -29,6 +33,12 @@ Entity* EntityFactory::createMainEntity(std::string eid) {
 
 Entity* EntityFactory::createBoardEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
+	ent->addComponentToEntity(BoardFactory::create());
+	return ent;
+}
+Entity* EntityFactory::createCellEntity(std::string eid) {
+	Entity* ent = createBaseEntity(eid);
+	ent->addComponentToEntity(GameSpriteComponent::createWithFileName("cell_bg.png"));
 	return ent;
 }
 

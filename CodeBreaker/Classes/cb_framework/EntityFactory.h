@@ -27,6 +27,7 @@ namespace codebreaker {
 		static Entity* createBaseEntity(std::string eid);
 		static Entity* createMainEntity(std::string eid);
 		static Entity* createBoardEntity(std::string eid);
+		static Entity* createCellEntity(std::string eid);
 		static Entity* createEntity(std::string templateId, std::string eid);
 
 

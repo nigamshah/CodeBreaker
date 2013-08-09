@@ -7,91 +7,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CodeBreaker/Classes/components/main/GameModeMachine.h"
-         timestampString = "397761344.58878"
+         filePath = "CodeBreaker/Classes/components/board/BoardFactory.cpp"
+         timestampString = "397776966.084966"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "50"
-         endingLineNumber = "50"
-         landmarkName = "init()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CodeBreaker/Classes/cb_framework/StateMachine.cpp"
-         timestampString = "397759553.942197"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
-         landmarkName = "StateMachine::_handleTrigger(Message&amp; message)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CodeBreaker/Classes/components/main/MainController.cpp"
-         timestampString = "397759574.24122"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
-         landmarkName = "MainController::_testHandler(Message&amp; msg)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CodeBreaker/Classes/cb_framework/State.cpp"
-         timestampString = "397759783.355304"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
-         landmarkName = "State::addTransition(std::string triggerName, State* pTargetState)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CodeBreaker/Classes/cb_framework/State.cpp"
-         timestampString = "397759841.090958"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
-         landmarkName = "State::addTransition(std::string triggerName, State* pTargetState)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CodeBreaker/Classes/cb_framework/StateMachine.cpp"
-         timestampString = "397759946.531592"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59"
-         landmarkName = "StateMachine::_addTransition(State* pSourceState, State* pTargetState, std::string triggerName)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CodeBreaker/Classes/components/main/GameModeMachine.h"
-         timestampString = "397761344.58878"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "55"
-         endingLineNumber = "55"
-         landmarkName = "init()"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
+         landmarkName = "BoardFactory::_createCells()"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

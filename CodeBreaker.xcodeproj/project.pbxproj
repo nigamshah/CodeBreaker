@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 362C501917B14AA800185A0F /* EntityFactory.cpp */; };
-		364840C417B53F67002FD524 /* GameModeMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 364840C217B53F66002FD524 /* GameModeMachine.cpp */; };
+		364840C717B57284002FD524 /* BoardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 364840C517B57284002FD524 /* BoardFactory.cpp */; };
+		364840CE17B579EC002FD524 /* GameSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 364840CC17B579EC002FD524 /* GameSprite.cpp */; };
+		364840D117B57B42002FD524 /* GameSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 364840CF17B57B42002FD524 /* GameSpriteComponent.cpp */; };
 		3672327E17B047230097E3F1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672327D17B047230097E3F1 /* QuartzCore.framework */; };
 		3672328017B047230097E3F1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672327F17B047230097E3F1 /* OpenGLES.framework */; };
 		3672328217B047230097E3F1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672328117B047230097E3F1 /* OpenAL.framework */; };
@@ -298,8 +300,13 @@
 		362C501917B14AA800185A0F /* EntityFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityFactory.cpp; sourceTree = "<group>"; };
 		362C501A17B14AA800185A0F /* EntityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityFactory.h; sourceTree = "<group>"; };
 		362C501D17B16FDF00185A0F /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		364840C217B53F66002FD524 /* GameModeMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameModeMachine.cpp; sourceTree = "<group>"; };
 		364840C317B53F67002FD524 /* GameModeMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModeMachine.h; sourceTree = "<group>"; };
+		364840C517B57284002FD524 /* BoardFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoardFactory.cpp; sourceTree = "<group>"; };
+		364840C617B57284002FD524 /* BoardFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardFactory.h; sourceTree = "<group>"; };
+		364840CC17B579EC002FD524 /* GameSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSprite.cpp; sourceTree = "<group>"; };
+		364840CD17B579EC002FD524 /* GameSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSprite.h; sourceTree = "<group>"; };
+		364840CF17B57B42002FD524 /* GameSpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSpriteComponent.cpp; sourceTree = "<group>"; };
+		364840D017B57B42002FD524 /* GameSpriteComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSpriteComponent.h; sourceTree = "<group>"; };
 		3672327A17B047230097E3F1 /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3672327D17B047230097E3F1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3672327F17B047230097E3F1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -934,6 +941,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		364840C817B577DE002FD524 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		3672327117B047230097E3F1 = {
 			isa = PBXGroup;
 			children = (
@@ -2132,8 +2146,8 @@
 			isa = PBXGroup;
 			children = (
 				3683432117B28C74006A8EFE /* components */,
-				3672363217B048AB0097E3F1 /* cb_framework */,
 				3672363417B048AB0097E3F1 /* nodes */,
+				3672363217B048AB0097E3F1 /* cb_framework */,
 				3672363517B048AB0097E3F1 /* utils */,
 				3672361F17B047290097E3F1 /* AppDelegate.h */,
 				3672362017B047290097E3F1 /* AppDelegate.cpp */,
@@ -2170,6 +2184,8 @@
 				3672363A17B049830097E3F1 /* MainMenuLayer.h */,
 				3683432D17B29128006A8EFE /* MainGameLayer.cpp */,
 				3683432E17B29128006A8EFE /* MainGameLayer.h */,
+				364840CC17B579EC002FD524 /* GameSprite.cpp */,
+				364840CD17B579EC002FD524 /* GameSprite.h */,
 			);
 			name = nodes;
 			path = Classes/nodes;
@@ -2188,8 +2204,9 @@
 		3683432117B28C74006A8EFE /* components */ = {
 			isa = PBXGroup;
 			children = (
-				3683432217B28C74006A8EFE /* board */,
 				3683432317B28C74006A8EFE /* main */,
+				3683432217B28C74006A8EFE /* board */,
+				364840C817B577DE002FD524 /* cell */,
 				3683432617B28C74006A8EFE /* shared */,
 				3683432717B28C74006A8EFE /* tile */,
 			);
@@ -2200,6 +2217,8 @@
 		3683432217B28C74006A8EFE /* board */ = {
 			isa = PBXGroup;
 			children = (
+				364840C517B57284002FD524 /* BoardFactory.cpp */,
+				364840C617B57284002FD524 /* BoardFactory.h */,
 			);
 			path = board;
 			sourceTree = "<group>";
@@ -2211,7 +2230,6 @@
 				3683432517B28C74006A8EFE /* MainController.h */,
 				3683432917B28CD4006A8EFE /* SceneManager.cpp */,
 				3683432A17B28CD4006A8EFE /* SceneManager.h */,
-				364840C217B53F66002FD524 /* GameModeMachine.cpp */,
 				364840C317B53F67002FD524 /* GameModeMachine.h */,
 			);
 			path = main;
@@ -2220,6 +2238,8 @@
 		3683432617B28C74006A8EFE /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				364840CF17B57B42002FD524 /* GameSpriteComponent.cpp */,
+				364840D017B57B42002FD524 /* GameSpriteComponent.h */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -2564,7 +2584,9 @@
 				3683432F17B29128006A8EFE /* MainGameLayer.cpp in Sources */,
 				3683433217B2C062006A8EFE /* StateMachine.cpp in Sources */,
 				3683433517B2C2DE006A8EFE /* State.cpp in Sources */,
-				364840C417B53F67002FD524 /* GameModeMachine.cpp in Sources */,
+				364840C717B57284002FD524 /* BoardFactory.cpp in Sources */,
+				364840CE17B579EC002FD524 /* GameSprite.cpp in Sources */,
+				364840D117B57B42002FD524 /* GameSpriteComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2589,7 +2611,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"\"$(PROJECT_NAME)/libs/cocos2dx/kazmath/include\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx\"",

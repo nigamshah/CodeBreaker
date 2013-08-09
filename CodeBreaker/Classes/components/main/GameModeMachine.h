@@ -32,7 +32,10 @@ namespace codebreaker {
 	public:
 		virtual void onEnter(Message& message) {
 			CCLog("Gameplay.onEnter %s", message.getName().c_str());
-			_machine->sendLocalMessage("switchScene", "Game");
+			_machine->sendLocalMessage("switchScene", "gameplay");
+
+			Entity* board = EntityManager::createEntity("Board", "board");
+
 		}
 
 		virtual void onExit(Message& message) {

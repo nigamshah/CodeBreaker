@@ -27,22 +27,10 @@ void MainController::start() {
 }
 
 void MainController::_testHandler(Message& msg) {
-	cocos2d::CCLog("msg received, message = %s", msg.getName().c_str());
-//	cocos2d::CCLog("data = %s", msg.getData<string*>()->c_str());
-//	string* s = new string("Game");
-//	sendLocalMessage("switchScene", s);
-//	delete s;
-
-	sendGlobalMessage("startGame");
 }
 
 void MainController::_awakeTests() {
-	_subscribe("startGameClicked", bind(&MainController::_testHandler, this, _1), "startGameClicked");
 }
 void MainController::_startTests() {
 
-	std::string* s = new std::string("Hello World");
-	sendLocalMessage("TestHandlerSystem", s);
-	delete s;
-	
 }
