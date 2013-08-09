@@ -10,6 +10,7 @@
 #define __CodeBreaker__State__
 
 #include "cocos2d.h"
+#include "Message.h"
 
 namespace codebreaker {
 	class StateMachine;
@@ -57,8 +58,8 @@ namespace codebreaker {
 
 		State* getTargetState(std::string triggerName);
 
-		virtual void onExit() {}
-		virtual void onEnter() {}
+		virtual void onEnter(Message& message) {}
+		virtual void onExit(Message& message) {}
 
 	};
 

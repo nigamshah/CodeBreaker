@@ -9,6 +9,7 @@
 #include "EntityFactory.h"
 #include "MainController.h"
 #include "SceneManager.h"
+#include "GameModeMachine.h"
 
 using namespace codebreaker;
 
@@ -19,11 +20,9 @@ EntityFactory::FactoryMap EntityFactory::s_factoryMap = {
 Entity* EntityFactory::createMainEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
 
-	Component* comp = MainController::create();
-	ent->addComponentToEntity(comp);
-
-	comp = SceneManager::create();
-	ent->addComponentToEntity(comp);
+	ent->addComponentToEntity(MainController::create());
+	ent->addComponentToEntity(SceneManager::create());
+	ent->addComponentToEntity(GameModeMachine::create());
 	
 	return ent;
 }

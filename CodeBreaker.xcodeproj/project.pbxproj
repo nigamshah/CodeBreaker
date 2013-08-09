@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 362C501917B14AA800185A0F /* EntityFactory.cpp */; };
+		364840C417B53F67002FD524 /* GameModeMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 364840C217B53F66002FD524 /* GameModeMachine.cpp */; };
 		3672327E17B047230097E3F1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672327D17B047230097E3F1 /* QuartzCore.framework */; };
 		3672328017B047230097E3F1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672327F17B047230097E3F1 /* OpenGLES.framework */; };
 		3672328217B047230097E3F1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3672328117B047230097E3F1 /* OpenAL.framework */; };
@@ -297,6 +298,8 @@
 		362C501917B14AA800185A0F /* EntityFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityFactory.cpp; sourceTree = "<group>"; };
 		362C501A17B14AA800185A0F /* EntityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityFactory.h; sourceTree = "<group>"; };
 		362C501D17B16FDF00185A0F /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		364840C217B53F66002FD524 /* GameModeMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameModeMachine.cpp; sourceTree = "<group>"; };
+		364840C317B53F67002FD524 /* GameModeMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModeMachine.h; sourceTree = "<group>"; };
 		3672327A17B047230097E3F1 /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3672327D17B047230097E3F1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3672327F17B047230097E3F1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2208,6 +2211,8 @@
 				3683432517B28C74006A8EFE /* MainController.h */,
 				3683432917B28CD4006A8EFE /* SceneManager.cpp */,
 				3683432A17B28CD4006A8EFE /* SceneManager.h */,
+				364840C217B53F66002FD524 /* GameModeMachine.cpp */,
+				364840C317B53F67002FD524 /* GameModeMachine.h */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -2559,6 +2564,7 @@
 				3683432F17B29128006A8EFE /* MainGameLayer.cpp in Sources */,
 				3683433217B2C062006A8EFE /* StateMachine.cpp in Sources */,
 				3683433517B2C2DE006A8EFE /* State.cpp in Sources */,
+				364840C417B53F67002FD524 /* GameModeMachine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

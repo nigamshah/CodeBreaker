@@ -29,6 +29,8 @@ namespace codebreaker {
 		void _subscribe(std::string message, MessageHandler messageHandler, std::string handlerToken);
 		void _unsubscribe(std::string message, std::string handlerToken);
 
+
+
 	public:
 		CC_SYNTHESIZE(bool, _updateEnabled, UpdateEnabled);
 		CC_SYNTHESIZE(bool, _messagesEnabled, MessagesEnabled);
@@ -40,12 +42,18 @@ namespace codebreaker {
 		virtual void update(float dt) {};
 
 		void sendLocalMessage(std::string message);
+		void sendLocalMessage(std::string message, std::string strData);
+		void sendLocalMessage(std::string message, int intData);
 		void sendLocalMessage(std::string message, void* data);
 
 		void sendMessageToEntity(std::string eid, std::string message);
+		void sendMessageToEntity(std::string eid, std::string message, std::string strData);
+		void sendMessageToEntity(std::string eid, std::string message, int intData);
 		void sendMessageToEntity(std::string eid, std::string message, void* data);
 
 		void sendGlobalMessage(std::string message);
+		void sendGlobalMessage(std::string message, std::string strData);
+		void sendGlobalMessage(std::string message, int intData);
 		void sendGlobalMessage(std::string message, void* data);
 		
 		void handleMessage(std::string message, Message& messageObj);

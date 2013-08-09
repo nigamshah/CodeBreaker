@@ -15,6 +15,8 @@
 #include "Entity.h"
 #include "Component.h"
 #include "Message.h"
+#include "StateMachine.h"
+#include "State.h"
 
 using namespace codebreaker;
 using namespace cocos2d;

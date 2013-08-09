@@ -40,8 +40,11 @@ bool State::hasTransition(std::string triggerName) {
 }
 
 State* State::getTargetState(std::string triggerName) {
+	State* result = nullptr;
 	auto it = _transitions.find(triggerName);
-	StateTransition* trans = it->second;
-	State* result = trans->getTargetState();
+	if (it != _transitions.end()) {
+		StateTransition* trans = it->second;
+		result = trans->getTargetState();
+	}
 	return result;
 }

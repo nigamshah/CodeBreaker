@@ -50,6 +50,16 @@ void Component::_unsubscribe(std::string message, std::string handlerToken) {
 void Component::sendLocalMessage(std::string message) {
 	sendLocalMessage(message, nullptr);
 }
+void Component::sendLocalMessage(std::string message, std::string strData) {
+	std::string* pStrObj = new std::string(strData);
+	sendLocalMessage(message, pStrObj);
+	delete pStrObj;
+}
+void Component::sendLocalMessage(std::string message, int intData) {
+	int* pIntData = new int(intData);
+	sendLocalMessage(message, pIntData);
+	delete pIntData;
+}
 
 void Component::sendLocalMessage(std::string message, void* data) {
 	Message* msgObj = new Message(message, this, data);
@@ -60,13 +70,32 @@ void Component::sendLocalMessage(std::string message, void* data) {
 void Component::sendMessageToEntity(std::string eid, std::string message) {
 	sendMessageToEntity(eid, message, nullptr);
 }
-
+void Component::sendMessageToEntity(std::string eid, std::string message, std::string strData) {
+	std::string* pStrObj = new std::string(strData);
+	sendMessageToEntity(eid, message, pStrObj);
+	delete pStrObj;
+}
+void Component::sendMessageToEntity(std::string eid, std::string message, int intData) {
+	int* pIntData = new int(intData);
+	sendMessageToEntity(eid, message, pIntData);
+	delete pIntData;
+}
 void Component::sendMessageToEntity(std::string eid, std::string message, void* data) {
 	EntityManager::sendMessageToEntity(eid, message, this, data);
 }
 
 void Component::sendGlobalMessage(std::string message) {
 	sendGlobalMessage(message, nullptr);
+}
+void Component::sendGlobalMessage(std::string message, std::string strData) {
+	std::string* pStrObj = new std::string(strData);
+	sendGlobalMessage(message, pStrObj);
+	delete pStrObj;
+}
+void Component::sendGlobalMessage(std::string message, int intData) {
+	int* pIntData = new int(intData);
+	sendGlobalMessage(message, pIntData);
+	delete pIntData;
 }
 
 void Component::sendGlobalMessage(std::string message, void* data) {
