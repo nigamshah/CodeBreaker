@@ -35,14 +35,28 @@ bool AppDelegate::applicationDidFinishLaunching()
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
+
+	// set search paths
+	std::vector<std::string> searchPaths;
+
+		//	Not using this now, but it is a good thing to remember....
+		//	- Nigam
+
+		//	if (screenSize.width > 768) {
+		//		searchPaths.push_back("hd");
+		//		pDirector->setContentScaleFactor(2);
+		//	} else {
+		//		searchPaths.push_back("sd");
+		//		pDirector->setContentScaleFactor(1);
+		//	}
+
+	searchPaths.push_back("game_images");
+	searchPaths.push_back("game_images/tile_sprites");
+
+	CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
+
 	// Main - the actual game init stuff starts here
 	codebreaker::EntityManager::createEntity("Main", "main");
-
-	
-
-
-//	_mainController = *(new codebreaker::MainController());
-//	_mainController.start();
 
     return true;
 }

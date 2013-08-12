@@ -15,5 +15,24 @@ GameSprite* GameSprite::gameSpriteWithFile(const char * pszFileName) {
 		return sprite;
 	}
 	CC_SAFE_DELETE(sprite);
-	return NULL;
+	return nullptr;
+}
+
+GameSprite* GameSprite::gameSpriteWithSpriteFrame(CCSpriteFrame* pSpriteFrame) {
+	GameSprite* sprite = new GameSprite();
+	if (sprite && sprite->initWithSpriteFrame(pSpriteFrame)) {
+		sprite->autorelease();
+		return sprite;
+	}
+	CC_SAFE_DELETE(sprite);
+	return nullptr;
+}
+GameSprite* GameSprite::gameSpriteWithSpriteFrameName(const char * pszSpriteFrameName) {
+	GameSprite* sprite = new GameSprite();
+	if (sprite && sprite->initWithSpriteFrameName(pszSpriteFrameName)) {
+		sprite->autorelease();
+		return sprite;
+	}
+	CC_SAFE_DELETE(sprite);
+	return nullptr;
 }

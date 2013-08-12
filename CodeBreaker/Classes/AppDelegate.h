@@ -20,8 +20,6 @@ The reason to implement with private inheritance is to hide some interface detai
 */
 class  AppDelegate : private cocos2d::CCApplication
 {
-private:
-	//codebreaker::MainController _mainController;
 
 public:
     AppDelegate();

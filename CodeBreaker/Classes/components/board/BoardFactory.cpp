@@ -13,11 +13,20 @@
 using namespace codebreaker;
 
 void BoardFactory::start() {
+
+	///////////////////////////////////////
+	//	init tile spritesheet
+	///////////////////////////////////////
+	CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("tile_spritesheet.plist");
+
+	///////////////////////////////////////
+
+
 	_createCells();
 }
 
 void BoardFactory::_createCells() {
-	CCNode* board = CCNode::create();
+	CCSpriteBatchNode* board = CCSpriteBatchNode::create("tile_spritesheet.png");
 
 	CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
 

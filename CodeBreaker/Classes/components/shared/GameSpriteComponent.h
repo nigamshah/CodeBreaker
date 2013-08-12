@@ -32,6 +32,25 @@ namespace codebreaker {
 			sprite->setComponent(comp);
 			return comp;
 		}
+		static GameSpriteComponent* createWithSpriteFrame(CCSpriteFrame* pSpriteFrame) {
+			GameSprite* sprite = GameSprite::gameSpriteWithSpriteFrame(pSpriteFrame);
+			if (!sprite) return nullptr;
+
+			GameSpriteComponent* comp = GameSpriteComponent::create();
+			comp->setGameSprite(sprite);
+			sprite->setComponent(comp);
+			return comp;
+		}
+		static GameSpriteComponent* createWithSpriteFrameName(const char * fileName) {
+			GameSprite* sprite = GameSprite::gameSpriteWithSpriteFrameName(fileName);
+			if (!sprite) return nullptr;
+
+			GameSpriteComponent* comp = GameSpriteComponent::create();
+			comp->setGameSprite(sprite);
+			sprite->setComponent(comp);
+			return comp;
+		}
+
 
 		CREATE_FUNC(GameSpriteComponent);
 

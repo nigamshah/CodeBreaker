@@ -38,7 +38,7 @@ Entity* EntityFactory::createBoardEntity(std::string eid) {
 }
 Entity* EntityFactory::createCellEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
-	ent->addComponentToEntity(GameSpriteComponent::createWithFileName("cell_bg.png"));
+	ent->addComponentToEntity(GameSpriteComponent::createWithSpriteFrameName("cell_bg.png"));
 	return ent;
 }
 
