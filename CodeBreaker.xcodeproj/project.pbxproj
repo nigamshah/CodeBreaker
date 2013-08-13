@@ -294,6 +294,7 @@
 		3683432F17B29128006A8EFE /* MainGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432D17B29128006A8EFE /* MainGameLayer.cpp */; };
 		3683433217B2C062006A8EFE /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683433017B2C061006A8EFE /* StateMachine.cpp */; };
 		3683433517B2C2DE006A8EFE /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683433317B2C2DE006A8EFE /* State.cpp */; };
+		3698613017B9607D0031D93A /* game_data in Resources */ = {isa = PBXBuildFile; fileRef = 3698612F17B9607D0031D93A /* game_data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -917,6 +918,18 @@
 		3683433117B2C062006A8EFE /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
 		3683433317B2C2DE006A8EFE /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
 		3683433417B2C2DE006A8EFE /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		3698612E17B95EA40031D93A /* FileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
+		3698612F17B9607D0031D93A /* game_data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = game_data; path = Resources/game_data; sourceTree = "<group>"; };
+		3698613217B96D6B0031D93A /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
+		3698613317B96D6B0031D93A /* filestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
+		3698613517B96D6B0031D93A /* pow10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pow10.h; sourceTree = "<group>"; };
+		3698613617B96D6B0031D93A /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		3698613717B96D6B0031D93A /* strfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strfunc.h; sourceTree = "<group>"; };
+		3698613817B96D6B0031D93A /* prettywriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prettywriter.h; sourceTree = "<group>"; };
+		3698613917B96D6B0031D93A /* rapidjson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rapidjson.h; sourceTree = "<group>"; };
+		3698613A17B96D6B0031D93A /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		3698613B17B96D6B0031D93A /* stringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringbuffer.h; sourceTree = "<group>"; };
+		3698613C17B96D6B0031D93A /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -995,6 +1008,7 @@
 		3672328E17B047230097E3F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3698612F17B9607D0031D93A /* game_data */,
 				3672362F17B047820097E3F1 /* game_images */,
 				3672328F17B047230097E3F1 /* CloseNormal.png */,
 				3672329117B047230097E3F1 /* CloseSelected.png */,
@@ -1027,6 +1041,7 @@
 		367232AF17B047230097E3F1 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				3698613117B96D6B0031D93A /* rapidjson */,
 				367232B017B047230097E3F1 /* cocos2dx */,
 				367234A017B047260097E3F1 /* CocosDenshion */,
 				367234B817B047260097E3F1 /* extensions */,
@@ -2196,6 +2211,7 @@
 			children = (
 				3672363617B048F70097E3F1 /* TypeUtils.cpp */,
 				3672363717B048F70097E3F1 /* TypeUtils.h */,
+				3698612E17B95EA40031D93A /* FileReader.h */,
 			);
 			name = utils;
 			path = Classes/utils;
@@ -2249,6 +2265,32 @@
 			children = (
 			);
 			path = tile;
+			sourceTree = "<group>";
+		};
+		3698613117B96D6B0031D93A /* rapidjson */ = {
+			isa = PBXGroup;
+			children = (
+				3698613217B96D6B0031D93A /* document.h */,
+				3698613317B96D6B0031D93A /* filestream.h */,
+				3698613417B96D6B0031D93A /* internal */,
+				3698613817B96D6B0031D93A /* prettywriter.h */,
+				3698613917B96D6B0031D93A /* rapidjson.h */,
+				3698613A17B96D6B0031D93A /* reader.h */,
+				3698613B17B96D6B0031D93A /* stringbuffer.h */,
+				3698613C17B96D6B0031D93A /* writer.h */,
+			);
+			name = rapidjson;
+			path = libs/rapidjson;
+			sourceTree = "<group>";
+		};
+		3698613417B96D6B0031D93A /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				3698613517B96D6B0031D93A /* pow10.h */,
+				3698613617B96D6B0031D93A /* stack.h */,
+				3698613717B96D6B0031D93A /* strfunc.h */,
+			);
+			path = internal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2315,6 +2357,7 @@
 				3672334317B047240097E3F1 /* ChangeLog in Resources */,
 				367234B717B047260097E3F1 /* project.pbxproj in Resources */,
 				3672363017B047820097E3F1 /* game_images in Resources */,
+				3698613017B9607D0031D93A /* game_data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

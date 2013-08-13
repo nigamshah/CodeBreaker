@@ -50,6 +50,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 		//		pDirector->setContentScaleFactor(1);
 		//	}
 
+	searchPaths.push_back("game_data");
 	searchPaths.push_back("game_images");
 	searchPaths.push_back("game_images/tile_sprites");
 

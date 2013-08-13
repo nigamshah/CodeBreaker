@@ -1,0 +1,10 @@
+{
+    "game_title": "Code Breaker - To the Max",
+
+	"board_settings": {
+		"grid_size": {
+			"num_columns": 5,
+			"num_rows": 5
+		}
+	}
+}
