@@ -23,8 +23,6 @@ namespace codebreaker {
 
 		virtual void start();
 		virtual void awake();
-		//virtual void update(float dt);
-
 
 		CREATE_FUNC(MainController);
 	};

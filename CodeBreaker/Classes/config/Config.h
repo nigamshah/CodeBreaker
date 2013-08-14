@@ -11,8 +11,10 @@
 #include "Config.h"
 #include "FileReader.h"
 #include "Json.h"
+#include "JsonObject.h"
 #include "StringUtils.h"
 
+using namespace cocos2d;
 using namespace cocos2d::extension;
 using namespace std;
 
@@ -22,35 +24,28 @@ namespace codebreaker {
 
 	private:
 		const char* const FILENAME_SETTINGS_GLOBAL = "settings_global.json";
-		Json* _globalConfig;
+		JsonObject* _globalConfig;
 
 	public:
+		~Config() {
+			CC_SAFE_RELEASE(_globalConfig);
+		}
 
 		bool init() {
 			string fileContentsGlobal = FileReader::FileReaderText(FILENAME_SETTINGS_GLOBAL);
 			CCLog("contents of file = \n%s", fileContentsGlobal.c_str());
 			if (fileContentsGlobal.empty()) return false;
 
-			_globalConfig = Json_create(fileContentsGlobal.c_str());
-			Json* titleNode = Json_getItem(_globalConfig, "game_title");
-			const char* titleStr = Json_getString(_globalConfig, "game_title", "No Value");
-			CCLog("titleStr = %s", titleStr);
-
-			Json* jsonObj1 = getJsonObject("entity_templates");
-			Json* jsonObj = getJsonObject("entity_templates.board.board_factory.grid_size");
-
+			Json* jsonNode = Json_create(fileContentsGlobal.c_str());
+			_globalConfig = JsonObject::create();
+			_globalConfig->retain();
+			_globalConfig->setJsonNode(jsonNode);
 
 			return true;
 		}
 
-		Json* getJsonObject(string keyPath) {
-			Json* result = _globalConfig;
-			vector<string> keyVector = StringUtils::split(keyPath, '.');
-
-			for(string key : keyVector) {
-				result = Json_getItem(result, key.c_str());
-			}
-
+		JsonObject* getJsonObject(string keyPath) {
+			JsonObject* result = _globalConfig->getChild(keyPath);
 			return result;
 		}
 	};

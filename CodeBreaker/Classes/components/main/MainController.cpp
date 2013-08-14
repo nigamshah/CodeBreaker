@@ -7,7 +7,7 @@
 //
 
 #include "MainController.h"
-
+#include "ServiceLocator.h"
 #include "Tester.h"
 
 
@@ -19,6 +19,12 @@ bool MainController::init() {
 	}
 
 	// Main init stuff here
+
+	ServiceLocator::init();
+
+	bool configSuccess = ServiceLocator::getConfig().init();
+	CCLog("Config success = %i", configSuccess);
+
 
 	return true;
 }

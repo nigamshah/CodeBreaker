@@ -296,6 +296,8 @@
 		3686F4A617BAB4BA00532336 /* spine-cocos2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F48F17BAB4BA00532336 /* spine-cocos2dx.cpp */; };
 		3686F4A917BAB52300532336 /* Tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F4A717BAB52300532336 /* Tester.cpp */; };
 		3698613017B9607D0031D93A /* game_data in Resources */ = {isa = PBXBuildFile; fileRef = 3698612F17B9607D0031D93A /* game_data */; };
+		36BAE1FF17BC1BE400DEB9CD /* JsonObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */; };
+		36BAE20217BC272400DEB9CD /* ServiceLocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE20017BC272400DEB9CD /* ServiceLocator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -923,9 +925,12 @@
 		3686F4A717BAB52300532336 /* Tester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tester.cpp; sourceTree = "<group>"; };
 		3686F4A817BAB52300532336 /* Tester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tester.h; sourceTree = "<group>"; };
 		3686F4AB17BBF1C500532336 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
-		3686F4AD17BC0EA500532336 /* JsonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonObject.h; sourceTree = "<group>"; };
 		3698612E17B95EA40031D93A /* FileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
 		3698612F17B9607D0031D93A /* game_data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = game_data; path = Resources/game_data; sourceTree = "<group>"; };
+		36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonObject.cpp; sourceTree = "<group>"; };
+		36BAE1FE17BC1BE400DEB9CD /* JsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonObject.h; sourceTree = "<group>"; };
+		36BAE20017BC272400DEB9CD /* ServiceLocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServiceLocator.cpp; path = CodeBreaker/Classes/utils/ServiceLocator.cpp; sourceTree = SOURCE_ROOT; };
+		36BAE20117BC272400DEB9CD /* ServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceLocator.h; path = CodeBreaker/Classes/utils/ServiceLocator.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2155,10 +2160,13 @@
 		3672363517B048AB0097E3F1 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				36BAE20017BC272400DEB9CD /* ServiceLocator.cpp */,
+				36BAE20117BC272400DEB9CD /* ServiceLocator.h */,
 				3672363717B048F70097E3F1 /* TypeUtils.h */,
 				3698612E17B95EA40031D93A /* FileReader.h */,
 				3686F4AB17BBF1C500532336 /* StringUtils.h */,
-				3686F4AD17BC0EA500532336 /* JsonObject.h */,
+				36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */,
+				36BAE1FE17BC1BE400DEB9CD /* JsonObject.h */,
 			);
 			name = utils;
 			path = Classes/utils;
@@ -2614,6 +2622,8 @@
 				3686F4A517BAB4BA00532336 /* SlotData.cpp in Sources */,
 				3686F4A617BAB4BA00532336 /* spine-cocos2dx.cpp in Sources */,
 				3686F4A917BAB52300532336 /* Tester.cpp in Sources */,
+				36BAE1FF17BC1BE400DEB9CD /* JsonObject.cpp in Sources */,
+				36BAE20217BC272400DEB9CD /* ServiceLocator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2647,8 +2657,9 @@
 					"\"$(PROJECT_NAME)/libs/cocos2dx/include\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/third_party/ios\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/**\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2678,8 +2689,9 @@
 					"\"$(PROJECT_NAME)/libs/cocos2dx/include\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/third_party/ios\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/**\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
