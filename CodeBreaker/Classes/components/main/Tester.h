@@ -22,15 +22,18 @@ namespace codebreaker {
 	public:
 
 		void init() {
-			std::string fileContentsGlobal = FileReader::FileReaderText("settings_global.json");
-			CCLog("contents of file = \n%s", fileContentsGlobal.c_str());
+//			std::string fileContentsGlobal = FileReader::FileReaderText("settings_global.json");
+//			CCLog("contents of file = \n%s", fileContentsGlobal.c_str());
+//
+//			Json* json = Json_create(fileContentsGlobal.c_str());
+//
+//			Json* titleNode = Json_getItem(json, "game_title");
+//
+//			const char* titleStr = Json_getString(json, "game_title", "No Value");
+//			CCLog("titleStr = %s", titleStr);
 
-			Json* json = Json_create(fileContentsGlobal.c_str());
-
-			Json* titleNode = Json_getItem(json, "game_title");
-
-			const char* titleStr = Json_getString(json, "game_title", "No Value");
-			CCLog("titleStr = %s", titleStr);
+			Config config;
+			config.init();
 			
 
 
