@@ -57,7 +57,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 	CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 
 	// Main - the actual game init stuff starts here
-	codebreaker::EntityManager::createEntity("Main", "main");
+	codebreaker::EntityManager::createEntity("main", "main");
 
     return true;
 }

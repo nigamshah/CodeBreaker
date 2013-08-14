@@ -38,7 +38,7 @@ void BoardFactory::_createCells() {
 	for (int column = 0; column < numColumns; column++) {
 		for (int row = 0; row < numRows; row++) {
 			string cellId = "cell_" + to_string(column) + "." + to_string(row);
-			Entity* ent = EntityManager::createEntity("Cell", cellId);
+			Entity* ent = EntityManager::createEntity("cell", cellId);
 			ComponentList* gameSpriteComponents = ent->getComponentsByType<GameSpriteComponent>();
 			GameSpriteComponent* comp = static_cast<GameSpriteComponent*>(gameSpriteComponents->front());
 			GameSprite* sprite = comp->getGameSprite();

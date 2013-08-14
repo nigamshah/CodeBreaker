@@ -1,10 +1,15 @@
 {
     "game_title": "Code Breaker - To the Max",
-
-	"board_settings": {
-		"grid_size": {
-			"num_columns": 5,
-			"num_rows": 5
-		}
-	}
+    "entity_templates": {
+        "main": {},
+        "board": {
+            "board_factory": {
+                "grid_size": {
+                    "num_columns": 5,
+                    "num_rows": 5
+                }
+            }
+        },
+        "cell": {}
+    }
 }

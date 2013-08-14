@@ -34,7 +34,7 @@ namespace codebreaker {
 			CCLog("Gameplay.onEnter %s", message.getName().c_str());
 			_machine->sendLocalMessage("switchScene", "gameplay");
 
-			Entity* board = EntityManager::createEntity("Board", "board");
+			Entity* board = EntityManager::createEntity("board", "board");
 
 		}
 

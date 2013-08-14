@@ -16,9 +16,9 @@
 using namespace codebreaker;
 
 EntityFactory::FactoryMap EntityFactory::s_factoryMap = {
-	{ "Main", &EntityFactory::createMainEntity},
-	{ "Board", &EntityFactory::createBoardEntity},
-	{ "Cell", &EntityFactory::createCellEntity}
+	{ "main", &EntityFactory::createMainEntity},
+	{ "board", &EntityFactory::createBoardEntity},
+	{ "cell", &EntityFactory::createCellEntity}
 };
 
 Entity* EntityFactory::createMainEntity(std::string eid) {

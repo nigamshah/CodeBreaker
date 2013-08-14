@@ -10,13 +10,12 @@
 #define __CodeBreaker__MainController__
 
 #include "codebreaker.h"
+#include "Tester.h"
 
 namespace codebreaker {
 	class MainController : public Component {
 	private:
-		void _startTests();
-		void _awakeTests();
-		void _testHandler(Message& msg);
+		Tester _tester;
 
 	public:
 
