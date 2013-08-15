@@ -22,9 +22,12 @@ namespace codebreaker {
 
 		static void init();
 
-		static Config getConfig() {
-			return *s_config;
+		static Config* getConfig() {
+			return s_config;
 		};
+		static CCDirector* getDirector() {
+			return CCDirector::sharedDirector();
+		}
 
 
 	};

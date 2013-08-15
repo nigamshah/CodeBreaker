@@ -15,12 +15,14 @@
 namespace codebreaker {
 	class MainController : public Component {
 	private:
-		Tester _tester;
+		Tester* _tester;
 
 	public:
+		~MainController() {
+			delete _tester;
+		}
 
 		virtual bool init();
-
 		virtual void start();
 		virtual void awake();
 

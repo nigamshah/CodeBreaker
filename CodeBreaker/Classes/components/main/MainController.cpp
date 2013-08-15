@@ -22,7 +22,7 @@ bool MainController::init() {
 
 	ServiceLocator::init();
 
-	bool configSuccess = ServiceLocator::getConfig().init();
+	bool configSuccess = ServiceLocator::getConfig()->init();
 	CCLog("Config success = %i", configSuccess);
 
 
@@ -33,6 +33,6 @@ void MainController::awake() {
 
 }
 void MainController::start() {
-	_tester = *(new Tester());
-	_tester.init();
+	_tester = new Tester();
+	_tester->init();
 }

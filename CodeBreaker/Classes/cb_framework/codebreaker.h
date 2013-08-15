@@ -17,6 +17,8 @@
 #include "Message.h"
 #include "StateMachine.h"
 #include "State.h"
+#include "ServiceLocator.h"
+#include "JsonObject.h"
 
 using namespace codebreaker;
 using namespace cocos2d;

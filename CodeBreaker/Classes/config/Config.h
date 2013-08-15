@@ -44,6 +44,12 @@ namespace codebreaker {
 			return true;
 		}
 
+		JsonObject* getComponentSettings(string entityTemplateId, string componentTemplateId) {
+			string keyPath = "entity_templates." + entityTemplateId + "." + componentTemplateId;
+			JsonObject* result = getJsonObject(keyPath);
+			return result;
+		}
+
 		JsonObject* getJsonObject(string keyPath) {
 			JsonObject* result = _globalConfig->getChild(keyPath);
 			return result;

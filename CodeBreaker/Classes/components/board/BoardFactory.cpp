@@ -16,6 +16,8 @@ void BoardFactory::start() {
 
 	///////////////////////////////////////
 	//	init tile spritesheet
+	//		this should go in a sprite factory
+	//		of some sort (later)
 	///////////////////////////////////////
 	CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("tile_spritesheet.plist");
 
@@ -28,12 +30,15 @@ void BoardFactory::start() {
 void BoardFactory::_createCells() {
 	CCSpriteBatchNode* board = CCSpriteBatchNode::create("tile_spritesheet.png");
 
-	CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
+	CCSize screenSize = ServiceLocator::getDirector()->getWinSize();
 
-	const float cellSize = 96.0;
-	const float cellPadding = 0;
-	const int numColumns = 5;
-	const int numRows = 5;
+	JsonObject* settings = ServiceLocator::getConfig()->getComponentSettings("board", "board_factory");
+
+	JsonObject* gridSizeSettings = settings->getChild("grid_size");
+	const float cellSize = gridSizeSettings->getChild("cell_size")->getFloat();
+	const float cellPadding = gridSizeSettings->getChild("cell_padding")->getFloat();
+	const int numColumns = gridSizeSettings->getChild("num_columns")->getInt();
+	const int numRows = gridSizeSettings->getChild("num_rows")->getInt();
 
 	for (int column = 0; column < numColumns; column++) {
 		for (int row = 0; row < numRows; row++) {

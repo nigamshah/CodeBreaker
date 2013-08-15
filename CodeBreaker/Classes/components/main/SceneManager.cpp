@@ -26,7 +26,7 @@ bool SceneManager::init() {
 	_gameplayScene->retain();
 
 	_currentScene = _mainMenuScene;
-	CCDirector::sharedDirector()->runWithScene(_mainMenuScene);
+	ServiceLocator::getDirector()->runWithScene(_mainMenuScene);
 	return true;
 }
 
