@@ -67,7 +67,8 @@ CCScene* SceneManager::_createScene(CCLayer* pLayer) {
 	CCScene *pScene = CCScene::create();
 
 	// add layer as a child to scene
-	pScene->addChild(pLayer);
+	// pScene->addChild(pLayer);
+	pScene->addChild(pLayer, 0, 0);
 
     // return the scene
 	return pScene;

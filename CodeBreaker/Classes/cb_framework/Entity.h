@@ -42,6 +42,8 @@ namespace codebreaker {
 		template <class T> ComponentList* getComponentsByType();
 		ComponentList* getComponentsByType(std::string typeName);
 
+		template <class T> T* getComponentByType();
+
 		template <class T> bool hasComponentOfType();
 		bool hasComponentOfType(std::string typeName);
 
@@ -63,6 +65,14 @@ namespace codebreaker {
 		std::string typeName = TypeUtils::demangledTypeName(typeid(T).name());
 		return getComponentsByType(typeName);
 	}
+	template <class T>
+	T* Entity::getComponentByType() {
+		std::string typeName = TypeUtils::demangledTypeName(typeid(T).name());
+		ComponentList* list = getComponentsByType(typeName);
+		if (list->empty()) return nullptr;
+		return static_cast<T*>(list->front());
+	}
+
 
 	template <class T>
 	bool Entity::hasComponentOfType() {

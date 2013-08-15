@@ -35,6 +35,11 @@ namespace codebreaker {
 
 		~SceneManager();
 
+		CCScene* getGameplayScene() { return _gameplayScene; }
+		CCScene* getGameOverScene() { return _gameOverScene; }
+		CCScene* getMainMenuScene() { return _mainMenuScene; }
+		CCScene* getCurrentScene() { return _currentScene; }
+
 		virtual bool init();
 		virtual void awake();
 		virtual void start();

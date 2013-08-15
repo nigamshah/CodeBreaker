@@ -7,10 +7,17 @@
 //
 
 #include "EntityFactory.h"
+
+// shared
+#include "GameSpriteComponent.h"
+
+// main
 #include "MainController.h"
 #include "SceneManager.h"
 #include "GameModeMachine.h"
-#include "GameSpriteComponent.h"
+#include "GameplayInputMachine.h"
+
+// board
 #include "BoardFactory.h"
 
 using namespace codebreaker;
@@ -27,6 +34,7 @@ Entity* EntityFactory::createMainEntity(std::string eid) {
 	ent->addComponentToEntity(MainController::create());
 	ent->addComponentToEntity(SceneManager::create());
 	ent->addComponentToEntity(GameModeMachine::create());
+	ent->addComponentToEntity(GameplayInputMachine::create());
 	
 	return ent;
 }

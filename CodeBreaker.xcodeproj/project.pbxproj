@@ -296,6 +296,7 @@
 		3686F4A617BAB4BA00532336 /* spine-cocos2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F48F17BAB4BA00532336 /* spine-cocos2dx.cpp */; };
 		3686F4A917BAB52300532336 /* Tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F4A717BAB52300532336 /* Tester.cpp */; };
 		3698613017B9607D0031D93A /* game_data in Resources */ = {isa = PBXBuildFile; fileRef = 3698612F17B9607D0031D93A /* game_data */; };
+		36AD72CA17BD84C1006B52A9 /* GameplayInputMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36AD72C817BD84C1006B52A9 /* GameplayInputMachine.cpp */; };
 		36BAE1FF17BC1BE400DEB9CD /* JsonObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */; };
 		36BAE20217BC272400DEB9CD /* ServiceLocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE20017BC272400DEB9CD /* ServiceLocator.cpp */; };
 /* End PBXBuildFile section */
@@ -927,6 +928,8 @@
 		3686F4AB17BBF1C500532336 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		3698612E17B95EA40031D93A /* FileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
 		3698612F17B9607D0031D93A /* game_data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = game_data; path = Resources/game_data; sourceTree = "<group>"; };
+		36AD72C817BD84C1006B52A9 /* GameplayInputMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameplayInputMachine.cpp; sourceTree = "<group>"; };
+		36AD72C917BD84C1006B52A9 /* GameplayInputMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayInputMachine.h; sourceTree = "<group>"; };
 		36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonObject.cpp; sourceTree = "<group>"; };
 		36BAE1FE17BC1BE400DEB9CD /* JsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonObject.h; sourceTree = "<group>"; };
 		36BAE20017BC272400DEB9CD /* ServiceLocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServiceLocator.cpp; path = CodeBreaker/Classes/utils/ServiceLocator.cpp; sourceTree = SOURCE_ROOT; };
@@ -2204,6 +2207,8 @@
 				364840C317B53F67002FD524 /* GameModeMachine.h */,
 				3686F4A717BAB52300532336 /* Tester.cpp */,
 				3686F4A817BAB52300532336 /* Tester.h */,
+				36AD72C817BD84C1006B52A9 /* GameplayInputMachine.cpp */,
+				36AD72C917BD84C1006B52A9 /* GameplayInputMachine.h */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -2624,6 +2629,7 @@
 				3686F4A917BAB52300532336 /* Tester.cpp in Sources */,
 				36BAE1FF17BC1BE400DEB9CD /* JsonObject.cpp in Sources */,
 				36BAE20217BC272400DEB9CD /* ServiceLocator.cpp in Sources */,
+				36AD72CA17BD84C1006B52A9 /* GameplayInputMachine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
