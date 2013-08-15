@@ -17,43 +17,21 @@ namespace codebreaker {
 	class InputStateReady : public State {
 
 	public:
-
-		virtual void onEnter(Message& message) {
-			CCLog("InputStateReady.onEnter %s", message.getName().c_str());
-		}
-
-		virtual void onExit(Message& message) {
-			CCLog("InputStateReady.onExit %s", message.getName().c_str());
-		}
-
+		virtual void onEnter(Message& message);
+		virtual void onExit(Message& message);
 	};
 
 	class InputStateDisabled : public State {
-
 	public:
-
-		virtual void onEnter(Message& message) {
-			CCLog("InputStateDisabled.onEnter %s", message.getName().c_str());
-		}
-
-		virtual void onExit(Message& message) {
-			CCLog("InputStateDisabled.onExit %s", message.getName().c_str());
-		}
-
+		virtual void onEnter(Message& message);
+		virtual void onExit(Message& message);
 	};
 
 	class InputStateDragging : public State {
 
 	public:
-
-		virtual void onEnter(Message& message) {
-			CCLog("InputStateDragging.onEnter %s", message.getName().c_str());
-		}
-
-		virtual void onExit(Message& message) {
-			CCLog("InputStateDragging.onExit %s", message.getName().c_str());
-		}
-
+		virtual void onEnter(Message& message);
+		virtual void onExit(Message& message);
 	};
 
 	class GameplayInputMachine : public StateMachine {
