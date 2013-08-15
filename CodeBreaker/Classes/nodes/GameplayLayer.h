@@ -16,8 +16,12 @@ namespace codebreaker {
 	class GameplayLayer : public CCLayer {
 
 	public:
-		//~MainGameLayer(void);
+		//~GameplayLayer(void);
 		virtual bool init();
+		virtual void ccTouchesBegan(CCSet* pTouches, CCEvent* event);
+		virtual void ccTouchesMoved(CCSet* pTouches, CCEvent* event);
+		virtual void ccTouchesEnded(CCSet* pTouches, CCEvent* event);
+
 		CREATE_FUNC(GameplayLayer);
 	};
 }

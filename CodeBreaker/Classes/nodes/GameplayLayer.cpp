@@ -31,5 +31,17 @@ bool GameplayLayer::init()
 	// add the sprite as a child to this layer
 	this->addChild(pSprite, 0);
 
+	this->setTouchEnabled(true);
+
 	return true;
+}
+void GameplayLayer::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
+	CCLog("Touches Began");
+
+}
+void GameplayLayer::ccTouchesMoved(CCSet* pTouches, CCEvent* event) {
+	CCLog("Touches Moved");
+}
+void GameplayLayer::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
+	CCLog("Touches Ended");
 }
