@@ -269,7 +269,7 @@
 		3672364717B04CE30097E3F1 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364517B04CE20097E3F1 /* Component.cpp */; };
 		3683432817B28C74006A8EFE /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432417B28C74006A8EFE /* MainController.cpp */; };
 		3683432B17B28CD4006A8EFE /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432917B28CD4006A8EFE /* SceneManager.cpp */; };
-		3683432F17B29128006A8EFE /* MainGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432D17B29128006A8EFE /* MainGameLayer.cpp */; };
+		3683432F17B29128006A8EFE /* GameplayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432D17B29128006A8EFE /* GameplayLayer.cpp */; };
 		3683433217B2C062006A8EFE /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683433017B2C061006A8EFE /* StateMachine.cpp */; };
 		3683433517B2C2DE006A8EFE /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683433317B2C2DE006A8EFE /* State.cpp */; };
 		3686F0D117BA9FDA00532336 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F0CF17BA9FDA00532336 /* Config.cpp */; };
@@ -871,8 +871,8 @@
 		3683432917B28CD4006A8EFE /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		3683432A17B28CD4006A8EFE /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		3683432C17B28D6E006A8EFE /* codebreaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = codebreaker.h; sourceTree = "<group>"; };
-		3683432D17B29128006A8EFE /* MainGameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainGameLayer.cpp; sourceTree = "<group>"; };
-		3683432E17B29128006A8EFE /* MainGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGameLayer.h; sourceTree = "<group>"; };
+		3683432D17B29128006A8EFE /* GameplayLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameplayLayer.cpp; sourceTree = "<group>"; };
+		3683432E17B29128006A8EFE /* GameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayLayer.h; sourceTree = "<group>"; };
 		3683433017B2C061006A8EFE /* StateMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
 		3683433117B2C062006A8EFE /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
 		3683433317B2C2DE006A8EFE /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
@@ -2148,8 +2148,8 @@
 			children = (
 				3672363917B049830097E3F1 /* MainMenuLayer.cpp */,
 				3672363A17B049830097E3F1 /* MainMenuLayer.h */,
-				3683432D17B29128006A8EFE /* MainGameLayer.cpp */,
-				3683432E17B29128006A8EFE /* MainGameLayer.h */,
+				3683432D17B29128006A8EFE /* GameplayLayer.cpp */,
+				3683432E17B29128006A8EFE /* GameplayLayer.h */,
 				364840CC17B579EC002FD524 /* GameSprite.cpp */,
 				364840CD17B579EC002FD524 /* GameSprite.h */,
 			);
@@ -2593,7 +2593,7 @@
 				362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */,
 				3683432817B28C74006A8EFE /* MainController.cpp in Sources */,
 				3683432B17B28CD4006A8EFE /* SceneManager.cpp in Sources */,
-				3683432F17B29128006A8EFE /* MainGameLayer.cpp in Sources */,
+				3683432F17B29128006A8EFE /* GameplayLayer.cpp in Sources */,
 				3683433217B2C062006A8EFE /* StateMachine.cpp in Sources */,
 				3683433517B2C2DE006A8EFE /* State.cpp in Sources */,
 				364840C717B57284002FD524 /* BoardFactory.cpp in Sources */,

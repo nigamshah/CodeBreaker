@@ -8,7 +8,7 @@
 
 #include "SceneManager.h"
 #include "MainMenuLayer.h"
-#include "MainGameLayer.h"
+#include "GameplayLayer.h"
 
 SceneManager::~SceneManager() {
 	CC_SAFE_RELEASE(_mainMenuScene);
@@ -22,7 +22,7 @@ bool SceneManager::init() {
 
 	_mainMenuScene = _createScene(MainMenuLayer::create());
 	_mainMenuScene->retain();
-	_gameplayScene = _createScene(MainGameLayer::create());
+	_gameplayScene = _createScene(GameplayLayer::create());
 	_gameplayScene->retain();
 
 	_currentScene = _mainMenuScene;

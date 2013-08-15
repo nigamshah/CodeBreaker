@@ -6,12 +6,12 @@
 //
 //
 
-#include "MainGameLayer.h"
+#include "GameplayLayer.h"
 
 using namespace codebreaker;
 
 // on "init" you need to initialize your instance
-bool MainGameLayer::init()
+bool GameplayLayer::init()
 {
 	//////////////////////////////
 	// 1. super init first

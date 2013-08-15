@@ -6,20 +6,20 @@
 //
 //
 
-#ifndef __CodeBreaker__MainGameLayer__
-#define __CodeBreaker__MainGameLayer__
+#ifndef __CodeBreaker__GameplayLayer__
+#define __CodeBreaker__GameplayLayer__
 
 #include "cocos2d.h"
 using namespace cocos2d;
 
 namespace codebreaker {
-	class MainGameLayer : public CCLayer {
+	class GameplayLayer : public CCLayer {
 
 	public:
 		//~MainGameLayer(void);
 		virtual bool init();
-		CREATE_FUNC(MainGameLayer);
+		CREATE_FUNC(GameplayLayer);
 	};
 }
 
-#endif /* defined(__CodeBreaker__MainGameLayer__) */
+#endif /* defined(__CodeBreaker__GameplayLayer__) */
