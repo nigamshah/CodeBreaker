@@ -63,7 +63,7 @@ namespace codebreaker {
 			_setInitialState("disabled");
 		}
 
-
+		GameplayLayer* getGameplayLayer() { return _gameplayLayer; }
 		CREATE_FUNC(GameplayInputMachine);
 
 	};
