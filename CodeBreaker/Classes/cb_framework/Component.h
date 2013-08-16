@@ -56,7 +56,7 @@ namespace codebreaker {
 		void sendGlobalMessage(std::string message, int intData);
 		void sendGlobalMessage(std::string message, void* data);
 		
-		void handleMessage(std::string message, Message& messageObj);
+		virtual void handleMessage(std::string message, Message& messageObj);
 	};
 }
 

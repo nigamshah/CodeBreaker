@@ -67,6 +67,8 @@ namespace codebreaker {
 		virtual void onEnter(Message& message) {}
 		virtual void onExit(Message& message) {}
 
+		virtual void handleMessage(std::string message, Message& messageObj);
+
 	};
 
 

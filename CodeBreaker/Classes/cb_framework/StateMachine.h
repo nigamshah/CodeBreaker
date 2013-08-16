@@ -34,6 +34,8 @@ namespace codebreaker {
 	public:
 		~StateMachine();
 		virtual bool init();
+
+		virtual void handleMessage(std::string message, Message& messageObj);
 	};
 
 	//////////////////////////////////////////////////////

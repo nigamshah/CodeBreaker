@@ -50,7 +50,7 @@ bool GameplayLayer::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent) {
 
 	CCPoint touchLocation;
 	if (pTouch) {
-		EntityManager::sendMessageToEntity("main", "TouchBegan", this, pTouch);
+		EntityManager::sendMessageToEntity("main", "touchBegan", this, pTouch);
 	}
 
 	return true;

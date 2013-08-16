@@ -59,3 +59,6 @@ State* State::getTargetState(std::string triggerName) {
 	}
 	return result;
 }
+void State::handleMessage(std::string message, Message& messageObj) {
+	_messenger->handleMessage(message, messageObj);
+}

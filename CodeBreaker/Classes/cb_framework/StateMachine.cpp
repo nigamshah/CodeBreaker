@@ -66,3 +66,11 @@ void StateMachine::_handleTrigger(Message& message) {
 		_doTransition(pTargetState, message);
 	}
 }
+
+// override from Component
+void StateMachine::handleMessage(std::string message, Message& messageObj) {
+	Component::handleMessage(message, messageObj); // super
+	for(State* state : _allStates) {
+		state->handleMessage(message, messageObj);
+	}
+}

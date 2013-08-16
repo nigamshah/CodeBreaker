@@ -13,9 +13,33 @@
 ////////////////////////////////////////
 void InputStateReady::onEnter(Message& message) {
 	CCLog("InputStateReady.onEnter %s", message.getName().c_str());
+
+	_messenger->subscribe("touchBegan", std::bind(&InputStateReady::_onTouchBegan, this, std::placeholders::_1), "touchBegan");
+
 	GameplayLayer* layer = static_cast<GameplayInputMachine*>(_machine)->getGameplayLayer();
 	layer->setTouchEnabled(true);
 }
+
+void InputStateReady::_onTouchBegan(Message& message) {
+	CCTouch* pTouch = static_cast<CCTouch*>(message.getData());
+	CCPoint touchLocation = pTouch->getLocation();
+	CCLog("----- touched at: x = %f / y = %f", touchLocation.x, touchLocation.y);
+	
+}
+
+
+//		// get location of touch as a CCPoint
+//		touchLocation = pTouch->getLocation();
+
+// iterate through the cells and determine which, if any cell was touched
+
+//		for (int p = 0; p < 2; p++) {
+//			player = (GameSprite *) _players->objectAtIndex(p);
+//			if (player->boundingBox().containsPoint(tap)) {
+//				player->setTouch(touch);
+//			}
+//		}
+
 
 void InputStateReady::onExit(Message& message) {
 	CCLog("InputStateReady.onExit %s", message.getName().c_str());
