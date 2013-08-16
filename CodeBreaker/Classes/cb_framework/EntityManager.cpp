@@ -11,7 +11,8 @@
 
 using namespace codebreaker;
 
-EntityManager::EntityMap EntityManager::s_entitiesById = *(new EntityMap());
+std::map<std::string, codebreaker::Entity*> EntityManager::s_entitiesById = *(new std::map<std::string, Entity*>());
+std::map<std::string, codebreaker::EntityList*> EntityManager::s_entitiesByTemplateId = *(new std::map<std::string, EntityList*>());
 
 void EntityManager::deleteAllEntities() {
 	for (auto& pr : s_entitiesById) {
@@ -19,12 +20,25 @@ void EntityManager::deleteAllEntities() {
 		CC_SAFE_RELEASE(ent);
 	}
 	s_entitiesById.clear();
+
+	for (auto& pr : s_entitiesByTemplateId) {
+		EntityList* entList = pr.second;
+		entList->clear();
+	}
+	s_entitiesByTemplateId.clear();
 }
 
 
 Entity* EntityManager::createEntity(std::string templateId, std::string eid) {
 	Entity* ent = EntityFactory::createEntity(templateId, eid);
 	ent->retain();
+
+	EntityList* pEntList = getEntitiesByTemplateId(templateId);
+	if (!pEntList) {
+		pEntList = new EntityList();
+		s_entitiesByTemplateId[templateId] = pEntList;
+	}
+	pEntList->push_back(ent);
 	s_entitiesById[eid] = ent;
 	ent->start();
 	return ent;
@@ -32,13 +46,20 @@ Entity* EntityManager::createEntity(std::string templateId, std::string eid) {
 
 void EntityManager::deleteEntity(std::string eid) {
 	Entity* ent = getEntity(eid);
-	CC_SAFE_RELEASE(ent);
+	std::string templateId = ent->getTemplateId();
+	EntityList* entList = getEntitiesByTemplateId(templateId);
+	entList->remove(ent);
 	s_entitiesById.erase(eid);
+	CC_SAFE_RELEASE(ent);
 }
 
 Entity* EntityManager::getEntity(std::string eid) {
 	Entity* ent = s_entitiesById[eid];
 	return ent;
+}
+EntityList* EntityManager::getEntitiesByTemplateId(std::string templateId) {
+	EntityList* result = s_entitiesByTemplateId[templateId];
+	return result;
 }
 
 

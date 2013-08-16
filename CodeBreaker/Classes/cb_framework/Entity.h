@@ -17,6 +17,8 @@
 
 namespace codebreaker {
 
+	typedef std::list<codebreaker::Component*> ComponentList;
+
 	class Entity : public cocos2d::CCObject {
 	private:
 
@@ -29,6 +31,7 @@ namespace codebreaker {
 		static Entity* createWithEid(std::string eid);
 
 		CC_SYNTHESIZE(std::string, _eid, Eid);
+		CC_SYNTHESIZE(std::string, _templateId, TemplateId);
 
 		~Entity(void);
 

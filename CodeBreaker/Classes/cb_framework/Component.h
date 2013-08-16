@@ -17,8 +17,6 @@ namespace codebreaker {
 
 	class Entity;
 
-	typedef std::list<codebreaker::Component*> ComponentList;
-
 	class Component : public cocos2d::CCObject {
 
 	protected:

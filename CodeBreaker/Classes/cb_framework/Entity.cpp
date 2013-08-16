@@ -17,6 +17,7 @@ using namespace codebreaker;
 Entity* Entity::createWithEid(std::string eid) {
 	Entity* ent = Entity::create();
 	ent->setEid(eid);
+	ent->setTemplateId("");
 	return ent;
 }
 

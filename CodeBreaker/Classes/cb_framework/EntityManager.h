@@ -16,6 +16,8 @@
 
 namespace codebreaker {
 
+	typedef std::list<codebreaker::Entity*> EntityList;
+	
 	class EntityManager {
 
 	public:
@@ -24,7 +26,7 @@ namespace codebreaker {
 		static void deleteEntity(std::string eid);
 
 		static Entity* getEntity(std::string eid);
-
+		static EntityList* getEntitiesByTemplateId(std::string templateId);
 		static void deleteAllEntities();
 
 		static void sendMessageToEntity(std::string eid, std::string message, cocos2d::CCObject* sender, void* data);
@@ -33,8 +35,9 @@ namespace codebreaker {
 
 	private:
 		static Entity* addEntity(std::string eid, Entity* ent);
-		typedef std::map<std::string, codebreaker::Entity*> EntityMap;
-		static EntityMap s_entitiesById;
+
+		static std::map<std::string, Entity*> s_entitiesById;
+		static std::map<std::string, EntityList*> s_entitiesByTemplateId;
 		
 	};
 }

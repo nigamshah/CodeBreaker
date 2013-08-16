@@ -61,5 +61,6 @@ Entity* EntityFactory::createEntity(std::string templateId, std::string eid) {
 		method = &EntityFactory::createBaseEntity;
 	}
 	Entity* ent = method(eid);
+	ent->setTemplateId(templateId);
 	return ent;
 }
