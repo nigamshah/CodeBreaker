@@ -23,6 +23,7 @@ void InputStateReady::onExit(Message& message) {
 	layer->setTouchEnabled(false);
 }
 
+
 ////////////////////////////////////////
 //	InputStateDisabled
 ////////////////////////////////////////

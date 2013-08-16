@@ -7,6 +7,7 @@
 //
 
 #include "GameplayLayer.h"
+#include "EntityManager.h"
 
 using namespace codebreaker;
 
@@ -46,8 +47,11 @@ bool GameplayLayer::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent) {
 	CCLog("TouchBegan");
 
 	// this is the boilerplate collision detection code from "Air Hockey"
-	
 
+	CCPoint touchLocation;
+	if (pTouch) {
+		EntityManager::sendMessageToEntity("main", "TouchBegan", this, pTouch);
+	}
 
 	return true;
 }

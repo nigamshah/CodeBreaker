@@ -69,4 +69,16 @@ namespace codebreaker {
 	};
 }
 
+//		// get location of touch as a CCPoint
+//		touchLocation = pTouch->getLocation();
+
+// iterate through the cells and determine which, if any cell was touched
+
+//		for (int p = 0; p < 2; p++) {
+//			player = (GameSprite *) _players->objectAtIndex(p);
+//			if (player->boundingBox().containsPoint(tap)) {
+//				player->setTouch(touch);
+//			}
+//		}
+
 #endif /* defined(__CodeBreaker__GameplayInputMachine__) */

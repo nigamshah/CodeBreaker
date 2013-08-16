@@ -32,9 +32,6 @@ namespace codebreaker {
 
 
 	public:
-
-
-		
 		~StateMachine();
 		virtual bool init();
 	};

@@ -46,19 +46,6 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CodeBreaker/Classes/components/main/GameModeMachine.h"
-         timestampString = "398364155.756789"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
-         landmarkName = "onEnter(Message&amp; message)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "CodeBreaker/libs/cocos2dx/layers_scenes_transitions_nodes/CCLayer.cpp"
          timestampString = "398364438.486854"
          startingColumnNumber = "9223372036854775807"
