@@ -299,6 +299,7 @@
 		36AD72CA17BD84C1006B52A9 /* GameplayInputMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36AD72C817BD84C1006B52A9 /* GameplayInputMachine.cpp */; };
 		36BAE1FF17BC1BE400DEB9CD /* JsonObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */; };
 		36BAE20217BC272400DEB9CD /* ServiceLocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE20017BC272400DEB9CD /* ServiceLocator.cpp */; };
+		36F605C617BEA30700EB386A /* Messenger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F605C417BEA30700EB386A /* Messenger.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -934,6 +935,8 @@
 		36BAE1FE17BC1BE400DEB9CD /* JsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonObject.h; sourceTree = "<group>"; };
 		36BAE20017BC272400DEB9CD /* ServiceLocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServiceLocator.cpp; path = CodeBreaker/Classes/utils/ServiceLocator.cpp; sourceTree = SOURCE_ROOT; };
 		36BAE20117BC272400DEB9CD /* ServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceLocator.h; path = CodeBreaker/Classes/utils/ServiceLocator.h; sourceTree = SOURCE_ROOT; };
+		36F605C417BEA30700EB386A /* Messenger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Messenger.cpp; sourceTree = "<group>"; };
+		36F605C517BEA30700EB386A /* Messenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenger.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2141,6 +2144,8 @@
 				3683433117B2C062006A8EFE /* StateMachine.h */,
 				3683433317B2C2DE006A8EFE /* State.cpp */,
 				3683433417B2C2DE006A8EFE /* State.h */,
+				36F605C417BEA30700EB386A /* Messenger.cpp */,
+				36F605C517BEA30700EB386A /* Messenger.h */,
 			);
 			name = cb_framework;
 			path = Classes/cb_framework;
@@ -2630,6 +2635,7 @@
 				36BAE1FF17BC1BE400DEB9CD /* JsonObject.cpp in Sources */,
 				36BAE20217BC272400DEB9CD /* ServiceLocator.cpp in Sources */,
 				36AD72CA17BD84C1006B52A9 /* GameplayInputMachine.cpp in Sources */,
+				36F605C617BEA30700EB386A /* Messenger.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "Message.h"
+#include "Messenger.h"
 
 namespace codebreaker {
 
@@ -21,25 +22,24 @@ namespace codebreaker {
 	class Component : public cocos2d::CCObject {
 
 	protected:
-		typedef std::function<void (Message&)> MessageHandler;
-		typedef std::list< std::pair<std::string, MessageHandler> >MessageHandlerList;
-
-		std::map<std::string, MessageHandlerList*> _messageHandlerMap;
+		Messenger* _messenger;
 
 		void _subscribe(std::string message, MessageHandler messageHandler, std::string handlerToken);
 		void _unsubscribe(std::string message, std::string handlerToken);
 
-
-
 	public:
 		CC_SYNTHESIZE(bool, _updateEnabled, UpdateEnabled);
-		CC_SYNTHESIZE(bool, _messagesEnabled, MessagesEnabled);
-		CC_SYNTHESIZE(Entity*, _entity, Entity);
+		CC_SYNTHESIZE_READONLY(Entity*, _entity, Entity);
+
+		void setEntity(Entity* pEnt);
 
 		virtual bool init();
 		virtual void awake() {};
 		virtual void start() {};
 		virtual void update(float dt) {};
+
+		void setMessagesEnabled(bool value);
+		bool getMessagesEnabled();
 
 		void sendLocalMessage(std::string message);
 		void sendLocalMessage(std::string message, std::string strData);

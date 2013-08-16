@@ -7,10 +7,13 @@
 //
 
 #include "State.h"
+#include "StateMachine.h"
+
 using namespace codebreaker;
 
 State::State() {
 	_transitions = *(new std::map<std::string, StateTransition*>);
+	_messenger = new Messenger();
 }
 State::~State() {
 	_id = "";
@@ -18,6 +21,14 @@ State::~State() {
 	_transitions.clear();
 }
 
+#include "Component.h"
+void State::setMachine(StateMachine* pMachine) {
+	_machine = pMachine;
+
+	_messenger->setOwner(_machine);
+	_messenger->setEntity(_machine->getEntity());
+
+}
 bool State::addTransition(std::string triggerName, State* pTargetState) {
 	if (pTargetState == nullptr) {
 		CCLOG("ERROR: Target state is null");

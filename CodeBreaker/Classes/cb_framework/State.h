@@ -10,6 +10,7 @@
 #define __CodeBreaker__State__
 
 #include "cocos2d.h"
+#include "Messenger.h"
 #include "Message.h"
 
 namespace codebreaker {
@@ -45,13 +46,18 @@ namespace codebreaker {
 	private:
 		std::map<std::string, StateTransition*> _transitions;
 
+	protected:
+		Messenger* _messenger;
+
 	public:
 
 		CC_SYNTHESIZE(std::string, _id, Id);
-		CC_SYNTHESIZE(StateMachine*, _machine, Machine); // weak ref
+		CC_SYNTHESIZE_READONLY(StateMachine*, _machine, Machine); // weak ref
 
 		State();
 		~State();
+
+		void setMachine(StateMachine* pMachine);
 		
 		bool addTransition(std::string triggerName, State* pTargetState);
 		bool hasTransition(std::string triggerName);
