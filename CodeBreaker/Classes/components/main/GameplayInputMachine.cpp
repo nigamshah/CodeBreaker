@@ -7,6 +7,8 @@
 //
 
 #include "GameplayInputMachine.h"
+#include "BoardView.h"
+#include "GameSpriteComponent.h"
 
 ////////////////////////////////////////
 //	InputStateReady
@@ -24,6 +26,24 @@ void InputStateReady::_onTouchBegan(Message& message) {
 	CCTouch* pTouch = static_cast<CCTouch*>(message.getData());
 	CCPoint touchLocation = pTouch->getLocation();
 	CCLog("----- touched at: x = %f / y = %f", touchLocation.x, touchLocation.y);
+
+	Entity* pBoardEnt = EntityManager::getEntity("board");
+	BoardView* boardView = pBoardEnt->getComponentByType<BoardView>();
+
+	bool isOnBoard = boardView->containsPoint(touchLocation);
+	CCLog("isOnBoard = %i", isOnBoard);
+	if (isOnBoard) {
+		// check the cells
+		// get all the cells
+		EntityList* pCellList = EntityManager::getEntitiesByTemplateId("cell");
+		for (Entity* pCell : *pCellList) {
+			GameSpriteComponent* spriteComp = pCell->getComponentByType<GameSpriteComponent>();
+			bool isOnCell = spriteComp->containsPoint(touchLocation);
+			if (isOnCell) {
+				CCLog("found Cell! entity id = %s", pCell->getEid().c_str());
+			}
+		}
+	}
 	
 }
 

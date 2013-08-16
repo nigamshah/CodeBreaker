@@ -51,6 +51,12 @@ namespace codebreaker {
 			return comp;
 		}
 
+		bool containsPoint(CCPoint point) {
+			CCRect box = _gameSprite->boundingBox();
+			bool result = box.containsPoint(point);
+			return result;
+		}
+
 
 		CREATE_FUNC(GameSpriteComponent);
 

@@ -18,6 +18,7 @@
 #include "GameplayInputMachine.h"
 
 // board
+#include "BoardView.h"
 #include "BoardFactory.h"
 
 using namespace codebreaker;
@@ -41,6 +42,7 @@ Entity* EntityFactory::createMainEntity(std::string eid) {
 
 Entity* EntityFactory::createBoardEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
+	ent->addComponentToEntity(BoardView::create());
 	ent->addComponentToEntity(BoardFactory::create());
 	return ent;
 }

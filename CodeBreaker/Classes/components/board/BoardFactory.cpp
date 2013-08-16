@@ -9,6 +9,7 @@
 #include "BoardFactory.h"
 #include "GameSprite.h"
 #include "GameSpriteComponent.h"
+#include "BoardView.h"
 
 using namespace codebreaker;
 
@@ -28,7 +29,7 @@ void BoardFactory::start() {
 }
 
 void BoardFactory::_createCells() {
-	CCSpriteBatchNode* board = CCSpriteBatchNode::create("tile_spritesheet.png");
+	CCSpriteBatchNode* cells = CCSpriteBatchNode::create("tile_spritesheet.png");
 
 	CCSize screenSize = ServiceLocator::getDirector()->getWinSize();
 
@@ -39,23 +40,32 @@ void BoardFactory::_createCells() {
 	const float cellPadding = gridSizeSettings->getChild("cell_padding")->getFloat();
 	const int numColumns = gridSizeSettings->getChild("num_columns")->getInt();
 	const int numRows = gridSizeSettings->getChild("num_rows")->getInt();
+	const float offset = (cellSize + cellPadding) / 2;
 
 	for (int column = 0; column < numColumns; column++) {
 		for (int row = 0; row < numRows; row++) {
 			string cellId = "cell_" + to_string(column) + "." + to_string(row);
 			Entity* ent = EntityManager::createEntity("cell", cellId);
-			ComponentList* gameSpriteComponents = ent->getComponentsByType<GameSpriteComponent>();
-			GameSpriteComponent* comp = static_cast<GameSpriteComponent*>(gameSpriteComponents->front());
+			GameSpriteComponent* comp = ent->getComponentByType<GameSpriteComponent>();
 			GameSprite* sprite = comp->getGameSprite();
-			sprite->setPosition(ccp(column * (cellSize + cellPadding), row * (cellSize + cellPadding)));
-			board->addChild(sprite);
+			sprite->setPosition(ccp(column * (cellSize + cellPadding) + offset, row * (cellSize + cellPadding) + offset));
+			cells->addChild(sprite);
 		}
 	}
 
-	float boardX = ((cellSize + cellPadding) / 2) + (screenSize.width - (numColumns * (cellSize + cellPadding))) / 2;
+	float boardWidth = numColumns * (cellSize + cellPadding);
+	float boardHeight = numRows * (cellSize + cellPadding);
+	CCSize boardSize = CCSize(boardWidth, boardHeight);
+
+	float boardX = (screenSize.width - boardWidth) / 2;
 	float boardY = boardX;
 
-	board->setPosition(ccp(boardX, boardY));
+	cells->setContentSize(boardSize);
+	cells->setPosition(ccp(boardX, boardY));
 
-	sendMessageToEntity("main", "addChildToScene", board);
+	BoardView* pBoardView = _entity->getComponentByType<BoardView>();
+	pBoardView->addCells(cells);
+	CCNode* boardNode = pBoardView->getNode();
+
+	sendMessageToEntity("main", "addChildToScene", boardNode);
 }
