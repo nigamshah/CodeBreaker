@@ -31,17 +31,32 @@ bool GameplayLayer::init()
 	// add the sprite as a child to this layer
 	this->addChild(pSprite, 0);
 
+	this->setTouchMode(ccTouchesMode::kCCTouchesOneByOne);
 	this->setTouchEnabled(true);
 
 	return true;
 }
-void GameplayLayer::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
-	CCLog("Touches Began");
 
+
+/////////////////////////////////////////////
+//	Touch Handlers
+/////////////////////////////////////////////
+
+bool GameplayLayer::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent) {
+	CCLog("TouchBegan");
+
+	// this is the boilerplate collision detection code from "Air Hockey"
+	
+
+
+	return true;
 }
-void GameplayLayer::ccTouchesMoved(CCSet* pTouches, CCEvent* event) {
-	CCLog("Touches Moved");
+void GameplayLayer::ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent) {
+	CCLog("TouchMoved");
 }
-void GameplayLayer::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
-	CCLog("Touches Ended");
+void GameplayLayer::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent) {
+	CCLog("TouchEnded");
+}
+void GameplayLayer::ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent) {
+	CCLog("TouchCancelled");
 }

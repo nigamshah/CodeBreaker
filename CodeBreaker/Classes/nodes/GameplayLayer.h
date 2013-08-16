@@ -18,9 +18,12 @@ namespace codebreaker {
 	public:
 		//~GameplayLayer(void);
 		virtual bool init();
-		virtual void ccTouchesBegan(CCSet* pTouches, CCEvent* event);
-		virtual void ccTouchesMoved(CCSet* pTouches, CCEvent* event);
-		virtual void ccTouchesEnded(CCSet* pTouches, CCEvent* event);
+
+		// Single Touch Handlers
+		virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
+		virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
+		virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
+		virtual void ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent);
 
 		CREATE_FUNC(GameplayLayer);
 	};
