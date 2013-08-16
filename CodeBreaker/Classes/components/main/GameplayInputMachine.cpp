@@ -32,17 +32,27 @@ void InputStateReady::_onTouchBegan(Message& message) {
 
 	bool isOnBoard = boardView->containsPoint(touchLocation);
 	CCLog("isOnBoard = %i", isOnBoard);
+
 	if (isOnBoard) {
 		// check the cells
 		// get all the cells
 		EntityList* pCellList = EntityManager::getEntitiesByTemplateId("cell");
+		string cellId = "";
 		for (Entity* pCell : *pCellList) {
 			GameSpriteComponent* spriteComp = pCell->getComponentByType<GameSpriteComponent>();
-			bool isOnCell = spriteComp->containsPoint(touchLocation);
+
+			bool isOnCell = spriteComp->containsWorldPoint(touchLocation);
 			if (isOnCell) {
-				CCLog("found Cell! entity id = %s", pCell->getEid().c_str());
+				cellId = pCell->getEid();
+				break;
 			}
 		}
+		if (!cellId.empty()) {
+			CCLog("found Cell! entity id = %s", cellId.c_str());
+		} else {
+			CCLog("no cell found");
+		}
+
 	}
 	
 }

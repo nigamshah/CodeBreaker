@@ -51,9 +51,12 @@ namespace codebreaker {
 			return comp;
 		}
 
-		bool containsPoint(CCPoint point) {
+		bool containsWorldPoint(CCPoint worldPoint) {
+			CCPoint localPoint = _gameSprite->getParent()->convertToNodeSpace(worldPoint);
+
 			CCRect box = _gameSprite->boundingBox();
-			bool result = box.containsPoint(point);
+
+			bool result = box.containsPoint(localPoint);
 			return result;
 		}
 
