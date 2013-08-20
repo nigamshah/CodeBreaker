@@ -14,17 +14,13 @@ using namespace codebreaker;
 FactoryMap EntityManager::s_factoryMap = {
 	{ "base", &EntityManager::createBaseEntity}
 };
-//{ "main", &EntityFactory::createMainEntity},
-//{ "board", &EntityFactory::createBoardEntity},
-//{ "cell", &EntityFactory::createCellEntity}
 
+std::map<std::string, codebreaker::Entity*> EntityManager::s_entitiesById;
+std::map<std::string, codebreaker::EntityList*> EntityManager::s_entitiesByTemplateId;
 
 void EntityManager::registerFactoryMethod(std::string templateId, FactoryMethod method) {
 	s_factoryMap[templateId] = method;
 }
-
-std::map<std::string, codebreaker::Entity*> EntityManager::s_entitiesById = *(new std::map<std::string, Entity*>());
-std::map<std::string, codebreaker::EntityList*> EntityManager::s_entitiesByTemplateId = *(new std::map<std::string, EntityList*>());
 
 void EntityManager::deleteAllEntities() {
 	for (auto& pr : s_entitiesById) {
