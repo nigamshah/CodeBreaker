@@ -32,7 +32,6 @@ EntityFactory::FactoryMap EntityFactory::s_factoryMap = {
 Entity* EntityFactory::createMainEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
 
-	ent->addComponentToEntity(MainController::create());
 	ent->addComponentToEntity(SceneManager::create());
 	ent->addComponentToEntity(GameModeMachine::create());
 	ent->addComponentToEntity(GameplayInputMachine::create());

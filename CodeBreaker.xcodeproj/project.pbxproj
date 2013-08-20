@@ -267,7 +267,6 @@
 		3672364117B04B280097E3F1 /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672363F17B04B280097E3F1 /* EntityManager.cpp */; };
 		3672364417B04C280097E3F1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364217B04C280097E3F1 /* Entity.cpp */; };
 		3672364717B04CE30097E3F1 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364517B04CE20097E3F1 /* Component.cpp */; };
-		3683432817B28C74006A8EFE /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432417B28C74006A8EFE /* MainController.cpp */; };
 		3683432B17B28CD4006A8EFE /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432917B28CD4006A8EFE /* SceneManager.cpp */; };
 		3683432F17B29128006A8EFE /* GameplayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432D17B29128006A8EFE /* GameplayLayer.cpp */; };
 		3683433217B2C062006A8EFE /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683433017B2C061006A8EFE /* StateMachine.cpp */; };
@@ -296,6 +295,7 @@
 		3686F4A617BAB4BA00532336 /* spine-cocos2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F48F17BAB4BA00532336 /* spine-cocos2dx.cpp */; };
 		3686F4A917BAB52300532336 /* Tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F4A717BAB52300532336 /* Tester.cpp */; };
 		3695A42417C3F78C002FBF4E /* RandomGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3695A42317C3F78C002FBF4E /* RandomGenerator.cpp */; };
+		3695A43417C40978002FBF4E /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3695A43217C40978002FBF4E /* MainController.cpp */; };
 		3698613017B9607D0031D93A /* game_data in Resources */ = {isa = PBXBuildFile; fileRef = 3698612F17B9607D0031D93A /* game_data */; };
 		36AD72CA17BD84C1006B52A9 /* GameplayInputMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36AD72C817BD84C1006B52A9 /* GameplayInputMachine.cpp */; };
 		36BAE1FF17BC1BE400DEB9CD /* JsonObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */; };
@@ -870,8 +870,6 @@
 		3672364317B04C280097E3F1 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		3672364517B04CE20097E3F1 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		3672364617B04CE20097E3F1 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
-		3683432417B28C74006A8EFE /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
-		3683432517B28C74006A8EFE /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		3683432917B28CD4006A8EFE /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		3683432A17B28CD4006A8EFE /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		3683432C17B28D6E006A8EFE /* codebreaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = codebreaker.h; sourceTree = "<group>"; };
@@ -930,6 +928,8 @@
 		3686F4A817BAB52300532336 /* Tester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tester.h; sourceTree = "<group>"; };
 		3686F4AB17BBF1C500532336 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		3695A42317C3F78C002FBF4E /* RandomGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomGenerator.cpp; sourceTree = "<group>"; };
+		3695A43217C40978002FBF4E /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainController.cpp; path = Classes/MainController.cpp; sourceTree = "<group>"; };
+		3695A43317C40978002FBF4E /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = Classes/MainController.h; sourceTree = "<group>"; };
 		3696052617C2CA04002B8858 /* RandomGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomGenerator.h; sourceTree = "<group>"; };
 		3698612E17B95EA40031D93A /* FileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
 		3698612F17B9607D0031D93A /* game_data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = game_data; path = Resources/game_data; sourceTree = "<group>"; };
@@ -2122,6 +2122,8 @@
 		3672361E17B047290097E3F1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3695A43217C40978002FBF4E /* MainController.cpp */,
+				3695A43317C40978002FBF4E /* MainController.h */,
 				3683432117B28C74006A8EFE /* components */,
 				3672363417B048AB0097E3F1 /* nodes */,
 				3672363217B048AB0097E3F1 /* cb_framework */,
@@ -2215,8 +2217,6 @@
 		3683432317B28C74006A8EFE /* main */ = {
 			isa = PBXGroup;
 			children = (
-				3683432417B28C74006A8EFE /* MainController.cpp */,
-				3683432517B28C74006A8EFE /* MainController.h */,
 				3683432917B28CD4006A8EFE /* SceneManager.cpp */,
 				3683432A17B28CD4006A8EFE /* SceneManager.h */,
 				364840C317B53F67002FD524 /* GameModeMachine.h */,
@@ -2611,7 +2611,6 @@
 				3672364417B04C280097E3F1 /* Entity.cpp in Sources */,
 				3672364717B04CE30097E3F1 /* Component.cpp in Sources */,
 				362C501B17B14AA800185A0F /* EntityFactory.cpp in Sources */,
-				3683432817B28C74006A8EFE /* MainController.cpp in Sources */,
 				3683432B17B28CD4006A8EFE /* SceneManager.cpp in Sources */,
 				3683432F17B29128006A8EFE /* GameplayLayer.cpp in Sources */,
 				3683433217B2C062006A8EFE /* StateMachine.cpp in Sources */,
@@ -2648,6 +2647,7 @@
 				36F605C617BEA30700EB386A /* Messenger.cpp in Sources */,
 				36F605C917BEC4F300EB386A /* BoardView.cpp in Sources */,
 				3695A42417C3F78C002FBF4E /* RandomGenerator.cpp in Sources */,
+				3695A43417C40978002FBF4E /* MainController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

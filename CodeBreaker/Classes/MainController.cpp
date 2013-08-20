@@ -9,14 +9,13 @@
 #include "MainController.h"
 #include "ServiceLocator.h"
 #include "Tester.h"
-
+#include "EntityManager.h"
 
 using namespace codebreaker;
 
+Tester MainController::s_tester;
+
 bool MainController::init() {
-	if (!Component::init()) {
-		return false;
-	}
 
 	// Main init stuff here
 
@@ -25,14 +24,9 @@ bool MainController::init() {
 	bool configSuccess = ServiceLocator::getConfig()->init();
 	CCLog("Config success = %i", configSuccess);
 
+	EntityManager::createEntity("main", "main");
+
+	s_tester.init();
 
 	return true;
-}
-void MainController::awake() {
-
-
-}
-void MainController::start() {
-	_tester = new Tester();
-	_tester->init();
 }

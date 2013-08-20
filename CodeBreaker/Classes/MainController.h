@@ -13,20 +13,13 @@
 #include "Tester.h"
 
 namespace codebreaker {
-	class MainController : public Component {
+	class MainController		{
 	private:
-		Tester* _tester;
+		static Tester s_tester;
 
 	public:
-		~MainController() {
-			delete _tester;
-		}
+		static bool init();
 
-		virtual bool init();
-		virtual void start();
-		virtual void awake();
-
-		CREATE_FUNC(MainController);
 	};
 }
 #endif /* defined(__CodeBreaker__MainController__) */

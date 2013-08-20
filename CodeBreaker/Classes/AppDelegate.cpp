@@ -10,6 +10,7 @@
 
 #include "cocos2d.h"
 #include "SimpleAudioEngine.h"
+#include "MainController.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -57,7 +58,9 @@ bool AppDelegate::applicationDidFinishLaunching()
 	CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 
 	// Main - the actual game init stuff starts here
-	codebreaker::EntityManager::createEntity("main", "main");
+	bool initSuccess = MainController::init();
+	CCLog("init succes = %i", initSuccess);
+
 
     return true;
 }

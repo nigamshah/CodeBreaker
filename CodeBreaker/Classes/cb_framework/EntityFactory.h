@@ -18,7 +18,7 @@ namespace codebreaker {
 
 	class EntityFactory {
 		friend class EntityManager;
-//	private:
+
 		typedef std::function<Entity* (std::string)> FactoryMethod;
 		typedef std::map<std::string, FactoryMethod> FactoryMap;
 
