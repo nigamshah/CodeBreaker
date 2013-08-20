@@ -11,6 +11,18 @@
 
 using namespace codebreaker;
 
+FactoryMap EntityManager::s_factoryMap = {
+	{ "base", &EntityManager::createBaseEntity}
+};
+//{ "main", &EntityFactory::createMainEntity},
+//{ "board", &EntityFactory::createBoardEntity},
+//{ "cell", &EntityFactory::createCellEntity}
+
+
+void EntityManager::registerFactoryMethod(std::string templateId, FactoryMethod method) {
+	s_factoryMap[templateId] = method;
+}
+
 std::map<std::string, codebreaker::Entity*> EntityManager::s_entitiesById = *(new std::map<std::string, Entity*>());
 std::map<std::string, codebreaker::EntityList*> EntityManager::s_entitiesByTemplateId = *(new std::map<std::string, EntityList*>());
 
@@ -30,7 +42,12 @@ void EntityManager::deleteAllEntities() {
 
 
 Entity* EntityManager::createEntity(std::string templateId, std::string eid) {
-	Entity* ent = EntityFactory::createEntity(templateId, eid);
+	FactoryMethod method = s_factoryMap[templateId];
+	if (!method) {
+		method = &EntityManager::createBaseEntity;
+	}
+	Entity* ent = method(eid);
+	ent->setTemplateId(templateId);
 	ent->retain();
 
 	EntityList* pEntList = getEntitiesByTemplateId(templateId);
@@ -41,6 +58,11 @@ Entity* EntityManager::createEntity(std::string templateId, std::string eid) {
 	pEntList->push_back(ent);
 	s_entitiesById[eid] = ent;
 	ent->start();
+	return ent;
+}
+
+Entity* EntityManager::createBaseEntity(std::string eid) {
+	Entity* ent = Entity::createWithEid(eid);
 	return ent;
 }
 

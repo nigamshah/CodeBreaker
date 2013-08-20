@@ -19,14 +19,19 @@ bool MainController::init() {
 
 	// Main init stuff here
 
-	ServiceLocator::init();
+	// first init the config
+	bool configSuccess = ServiceLocator::getConfig().init();
 
-	bool configSuccess = ServiceLocator::getConfig()->init();
-	CCLog("Config success = %i", configSuccess);
+	bool randomSuccess = ServiceLocator::getRandomGenerator().init();
+
+	// init the entity factories
+	bool entityFactorySuccess = ServiceLocator::getEntityFactory().init();
+
+	bool testerSuccess = s_tester.init();
 
 	EntityManager::createEntity("main", "main");
 
-	s_tester.init();
+	
 
-	return true;
+	return configSuccess && entityFactorySuccess && testerSuccess;
 }

@@ -8,8 +8,6 @@
 
 #include "ServiceLocator.h"
 
-Config* ServiceLocator::s_config;
-
-void ServiceLocator::init()  {
-	s_config = new Config();
-}
+Config ServiceLocator::s_config;
+RandomGenerator ServiceLocator::s_randomGenerator;
+EntityFactory ServiceLocator::s_entityFactory;

@@ -19,11 +19,12 @@ namespace codebreaker {
 		
 	public:
 
-		void init() {
-			RandomGenerator::init();
+		bool init() {
+
 			for (int i = 0; i < 5; i++) {
-				RandomGenerator::getRandomInt(0, 9);
+				int n = ServiceLocator::getRandomGenerator().getRandomInt(0, 9);
 			}
+			return true;
 			
 		}
 

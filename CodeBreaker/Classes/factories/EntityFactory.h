@@ -17,18 +17,22 @@ namespace codebreaker {
 
 
 	class EntityFactory {
-		friend class EntityManager;
 
-		typedef std::function<Entity* (std::string)> FactoryMethod;
-		typedef std::map<std::string, FactoryMethod> FactoryMap;
-
-		static FactoryMap s_factoryMap;
-
+	private:
 		static Entity* createBaseEntity(std::string eid);
 		static Entity* createMainEntity(std::string eid);
 		static Entity* createBoardEntity(std::string eid);
 		static Entity* createCellEntity(std::string eid);
-		static Entity* createEntity(std::string templateId, std::string eid);
+
+	public:
+
+		bool init() {
+			EntityManager::registerFactoryMethod("base", &EntityFactory::createBaseEntity);
+			EntityManager::registerFactoryMethod("main", &EntityFactory::createMainEntity);
+			EntityManager::registerFactoryMethod("board", &EntityFactory::createBoardEntity);
+			EntityManager::registerFactoryMethod("cell", &EntityFactory::createCellEntity);
+			return true;
+		}
 
 	};
 }

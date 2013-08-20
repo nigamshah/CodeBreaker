@@ -59,7 +59,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 
 	// Main - the actual game init stuff starts here
 	bool initSuccess = MainController::init();
-	CCLog("init succes = %i", initSuccess);
+	CCLog("init success = %i", initSuccess);
 
 
     return true;

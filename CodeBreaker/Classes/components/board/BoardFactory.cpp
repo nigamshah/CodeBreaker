@@ -33,7 +33,7 @@ void BoardFactory::_createCells() {
 
 	CCSize screenSize = ServiceLocator::getDirector()->getWinSize();
 
-	JsonObject* settings = ServiceLocator::getConfig()->getComponentSettings("board", "board_factory");
+	JsonObject* settings = ServiceLocator::getConfig().getComponentSettings("board", "board_factory");
 
 	JsonObject* gridSizeSettings = settings->getChild("grid_size");
 	const float cellSize = gridSizeSettings->getChild("cell_size")->getFloat();

@@ -6,24 +6,26 @@
 //
 //
 
+
 #include "RandomGenerator.h"
+#include "cocos2d.h"
+
 #include "ServiceLocator.h"
 #include "Config.h"
 #include "JsonObject.h"
+#include "StringUtils.h"
 
 using namespace codebreaker;
 using namespace cocos2d;
 
-default_random_engine* RandomGenerator::_generator;
-
-void RandomGenerator::init() {
+bool RandomGenerator::init() {
 	_generator = new default_random_engine();
 
 	time_t timer = time(nullptr);  /* get current time; same as: timer = time(NULL)  */
 	std::string seedString = StringUtils::to_string(timer);
 	CCLog("INTIIAL seedString = %s", seedString.c_str());
 
-	JsonObject* settings = ServiceLocator::getConfig()->getJsonObject("main_seed");
+	JsonObject* settings = ServiceLocator::getConfig().getJsonObject("main_seed");
 	std::string userSeed = settings->getString();
 	if (!userSeed.empty()) {
 		CCLog("using User supplied seedString = %s", userSeed.c_str());
@@ -31,7 +33,7 @@ void RandomGenerator::init() {
 	}
 	_generator->seed(*seedString.c_str());
 
-
+	return true;
 }
 
 int RandomGenerator::getRandomInt(int min, int max) {

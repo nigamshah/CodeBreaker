@@ -12,7 +12,6 @@
 #include "GameSpriteComponent.h"
 
 // main
-#include "MainController.h"
 #include "SceneManager.h"
 #include "GameModeMachine.h"
 #include "GameplayInputMachine.h"
@@ -22,12 +21,6 @@
 #include "BoardFactory.h"
 
 using namespace codebreaker;
-
-EntityFactory::FactoryMap EntityFactory::s_factoryMap = {
-	{ "main", &EntityFactory::createMainEntity},
-	{ "board", &EntityFactory::createBoardEntity},
-	{ "cell", &EntityFactory::createCellEntity}
-};
 
 Entity* EntityFactory::createMainEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
@@ -53,15 +46,5 @@ Entity* EntityFactory::createCellEntity(std::string eid) {
 
 Entity* EntityFactory::createBaseEntity(std::string eid) {
 	Entity* ent = Entity::createWithEid(eid);
-	return ent;
-}
-
-Entity* EntityFactory::createEntity(std::string templateId, std::string eid) {
-	FactoryMethod method = s_factoryMap[templateId];
-	if (!method) {
-		method = &EntityFactory::createBaseEntity;
-	}
-	Entity* ent = method(eid);
-	ent->setTemplateId(templateId);
 	return ent;
 }
