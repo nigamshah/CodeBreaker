@@ -25,6 +25,14 @@ namespace codebreaker {
 			}
 			return elems;
 		}
+
+		template <class T>
+		static std::string to_string (const T& t)
+		{
+			std::stringstream ss;
+			ss << t;
+			return ss.str();
+		}
 	};
 }
 

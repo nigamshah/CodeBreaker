@@ -9,10 +9,8 @@
 #ifndef __CodeBreaker__Tester__
 #define __CodeBreaker__Tester__
 
-#include "FileReader.h"
-#include "Json.h"
-#include "Config.h"
-
+#include "codebreaker.h"
+#include "RandomGenerator.h"
 
 namespace codebreaker {
 	using namespace cocos2d::extension;
@@ -22,6 +20,11 @@ namespace codebreaker {
 	public:
 
 		void init() {
+
+
+			RandomGenerator::getRand(1, 10);
+
+
 		}
 
 	};
