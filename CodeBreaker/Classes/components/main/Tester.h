@@ -20,11 +20,11 @@ namespace codebreaker {
 	public:
 
 		void init() {
-
-
-			RandomGenerator::getRand(1, 10);
-
-
+			RandomGenerator::init();
+			for (int i = 0; i < 5; i++) {
+				RandomGenerator::getRandomInt(0, 9);
+			}
+			
 		}
 
 	};

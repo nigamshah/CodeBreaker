@@ -295,6 +295,7 @@
 		3686F4A517BAB4BA00532336 /* SlotData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F48D17BAB4BA00532336 /* SlotData.cpp */; };
 		3686F4A617BAB4BA00532336 /* spine-cocos2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F48F17BAB4BA00532336 /* spine-cocos2dx.cpp */; };
 		3686F4A917BAB52300532336 /* Tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3686F4A717BAB52300532336 /* Tester.cpp */; };
+		3695A42417C3F78C002FBF4E /* RandomGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3695A42317C3F78C002FBF4E /* RandomGenerator.cpp */; };
 		3698613017B9607D0031D93A /* game_data in Resources */ = {isa = PBXBuildFile; fileRef = 3698612F17B9607D0031D93A /* game_data */; };
 		36AD72CA17BD84C1006B52A9 /* GameplayInputMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36AD72C817BD84C1006B52A9 /* GameplayInputMachine.cpp */; };
 		36BAE1FF17BC1BE400DEB9CD /* JsonObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */; };
@@ -928,6 +929,7 @@
 		3686F4A717BAB52300532336 /* Tester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tester.cpp; sourceTree = "<group>"; };
 		3686F4A817BAB52300532336 /* Tester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tester.h; sourceTree = "<group>"; };
 		3686F4AB17BBF1C500532336 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		3695A42317C3F78C002FBF4E /* RandomGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomGenerator.cpp; sourceTree = "<group>"; };
 		3696052617C2CA04002B8858 /* RandomGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomGenerator.h; sourceTree = "<group>"; };
 		3698612E17B95EA40031D93A /* FileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
 		3698612F17B9607D0031D93A /* game_data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = game_data; path = Resources/game_data; sourceTree = "<group>"; };
@@ -2180,6 +2182,7 @@
 				36BAE1FD17BC1BE400DEB9CD /* JsonObject.cpp */,
 				36BAE1FE17BC1BE400DEB9CD /* JsonObject.h */,
 				3696052617C2CA04002B8858 /* RandomGenerator.h */,
+				3695A42317C3F78C002FBF4E /* RandomGenerator.cpp */,
 			);
 			name = utils;
 			path = Classes/utils;
@@ -2644,6 +2647,7 @@
 				36AD72CA17BD84C1006B52A9 /* GameplayInputMachine.cpp in Sources */,
 				36F605C617BEA30700EB386A /* Messenger.cpp in Sources */,
 				36F605C917BEC4F300EB386A /* BoardView.cpp in Sources */,
+				3695A42417C3F78C002FBF4E /* RandomGenerator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

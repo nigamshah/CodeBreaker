@@ -1,5 +1,6 @@
 {
     "game_title": "Code Breaker - To the Max",
+	"main_seed": "debug_seed",
     "entity_templates": {
         "main": {},
         "board": {
