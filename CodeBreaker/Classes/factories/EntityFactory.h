@@ -30,7 +30,6 @@ namespace codebreaker {
 		static Entity* createCellEntity(std::string eid);
 		static Entity* createEntity(std::string templateId, std::string eid);
 
-
 	};
 }
 
