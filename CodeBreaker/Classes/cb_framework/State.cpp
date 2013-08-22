@@ -11,22 +11,13 @@
 
 using namespace codebreaker;
 
-State::State() {
-	_transitions = *(new std::map<std::string, StateTransition*>);
-	_messenger = new Messenger();
-}
-State::~State() {
-	_id = "";
-	_machine = nullptr;
-	_transitions.clear();
-}
-
 #include "Component.h"
 void State::setMachine(StateMachine* pMachine) {
 	_machine = pMachine;
 
-	_messenger->setOwner(_machine);
-	_messenger->setEntity(_machine->getEntity());
+	_messenger.init();
+	_messenger.setOwner(_machine);
+	_messenger.setEntity(_machine->getEntity());
 
 }
 bool State::addTransition(std::string triggerName, State* pTargetState) {
@@ -39,7 +30,8 @@ bool State::addTransition(std::string triggerName, State* pTargetState) {
 		return false;
 	}
 
-	_transitions[triggerName] = new StateTransition(this, pTargetState, triggerName);
+	StateTransition trans(this, pTargetState, triggerName);
+	_transitions.emplace(std::make_pair(triggerName, trans));
 
 	return true;
 }
@@ -54,11 +46,11 @@ State* State::getTargetState(std::string triggerName) {
 	State* result = nullptr;
 	auto it = _transitions.find(triggerName);
 	if (it != _transitions.end()) {
-		StateTransition* trans = it->second;
-		result = trans->getTargetState();
+		StateTransition trans = it->second;
+		result = trans.getTargetState();
 	}
 	return result;
 }
 void State::handleMessage(std::string message, Message& messageObj) {
-	_messenger->handleMessage(message, messageObj);
+	_messenger.handleMessage(message, messageObj);
 }

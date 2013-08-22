@@ -12,8 +12,7 @@
 
 using namespace codebreaker;
 
-Messenger::Messenger() {
-	_messageHandlerMap = *(new std::map<std::string, MessageHandlerList*>);
+void Messenger::init() {
 	_messagesEnabled = true;
 	_owner = nullptr;
 	_entity = nullptr;

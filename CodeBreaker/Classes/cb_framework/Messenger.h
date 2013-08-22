@@ -30,8 +30,7 @@ namespace codebreaker {
 		CC_SYNTHESIZE(cocos2d::CCObject*, _owner, Owner); // weak
 		CC_SYNTHESIZE(Entity*, _entity, Entity); // weak
 
-		Messenger();
-		~Messenger(void);
+		void init();
 
 		// Receiver methods
 		void subscribe(std::string message, MessageHandler messageHandler, std::string handlerToken);

@@ -23,6 +23,7 @@ namespace codebreaker {
 		static Entity* createMainEntity(std::string eid);
 		static Entity* createBoardEntity(std::string eid);
 		static Entity* createCellEntity(std::string eid);
+		static Entity* createTileEntity(std::string eid);
 
 	public:
 
@@ -31,6 +32,7 @@ namespace codebreaker {
 			EntityManager::registerFactoryMethod("main", &EntityFactory::createMainEntity);
 			EntityManager::registerFactoryMethod("board", &EntityFactory::createBoardEntity);
 			EntityManager::registerFactoryMethod("cell", &EntityFactory::createCellEntity);
+			EntityManager::registerFactoryMethod("tile", &EntityFactory::createTileEntity);
 			return true;
 		}
 

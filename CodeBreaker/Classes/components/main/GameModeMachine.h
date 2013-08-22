@@ -18,10 +18,19 @@ namespace codebreaker {
 	public:
 
 		virtual void onEnter(Message& message) {
+
+			for (int i=0; i < 5; i++) {
+				ServiceLocator::getRandomGenerator().getRandomInt(0, 10);
+			}
+
 			CCLog("Menu.onEnter %s", message.getName().c_str());
 		}
 
 		virtual void onExit(Message& message) {
+			for (int i=0; i < 5; i++) {
+				ServiceLocator::getRandomGenerator().getRandomInt(0, 10);
+			}
+
 			CCLog("Menu.onExit %s", message.getName().c_str());
 		}
 

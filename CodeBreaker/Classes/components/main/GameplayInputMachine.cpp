@@ -16,7 +16,7 @@
 void InputStateReady::onEnter(Message& message) {
 	CCLog("InputStateReady.onEnter %s", message.getName().c_str());
 
-	_messenger->subscribe("touchBegan", std::bind(&InputStateReady::_onTouchBegan, this, std::placeholders::_1), "touchBegan");
+	_messenger.subscribe("touchBegan", std::bind(&InputStateReady::_onTouchBegan, this, std::placeholders::_1), "touchBegan");
 
 	GameplayLayer* layer = static_cast<GameplayInputMachine*>(_machine)->getGameplayLayer();
 	layer->setTouchEnabled(true);

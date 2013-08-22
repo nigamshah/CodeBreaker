@@ -20,7 +20,15 @@
 #include "BoardView.h"
 #include "BoardFactory.h"
 
+// tile
+#include "TileMaterial.h"
+
 using namespace codebreaker;
+
+Entity* EntityFactory::createBaseEntity(std::string eid) {
+	Entity* ent = Entity::createWithEid(eid);
+	return ent;
+}
 
 Entity* EntityFactory::createMainEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
@@ -38,13 +46,23 @@ Entity* EntityFactory::createBoardEntity(std::string eid) {
 	ent->addComponentToEntity(BoardFactory::create());
 	return ent;
 }
+
 Entity* EntityFactory::createCellEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
 	ent->addComponentToEntity(GameSpriteComponent::createWithSpriteFrameName("cell_bg.png"));
 	return ent;
 }
 
-Entity* EntityFactory::createBaseEntity(std::string eid) {
-	Entity* ent = Entity::createWithEid(eid);
+Entity* EntityFactory::createTileEntity(std::string eid) {
+	Entity* ent = createBaseEntity(eid);
+	ent->addComponentToEntity(TileMaterial::create());
 	return ent;
 }
+
+
+
+
+
+
+
+

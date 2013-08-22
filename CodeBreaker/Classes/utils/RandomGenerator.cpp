@@ -19,7 +19,6 @@ using namespace codebreaker;
 using namespace cocos2d;
 
 bool RandomGenerator::init() {
-	_generator = new default_random_engine();
 
 	time_t timer = time(nullptr);  /* get current time; same as: timer = time(NULL)  */
 	std::string seedString = StringUtils::to_string(timer);
@@ -31,14 +30,14 @@ bool RandomGenerator::init() {
 		CCLog("using User supplied seedString = %s", userSeed.c_str());
 		seedString = userSeed;
 	}
-	_generator->seed(*seedString.c_str());
+	_generator.seed(*seedString.c_str());
 
 	return true;
 }
 
 int RandomGenerator::getRandomInt(int min, int max) {
 	std::uniform_int_distribution<int> distribution(min,max);
-	int roll = distribution(*_generator);
+	int roll = distribution(_generator);
 	CCLog("dice roll int = %i", roll);
 	return roll;
 }

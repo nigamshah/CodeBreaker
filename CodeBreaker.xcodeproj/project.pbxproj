@@ -265,6 +265,9 @@
 		3672363B17B049830097E3F1 /* MainMenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672363917B049830097E3F1 /* MainMenuLayer.cpp */; };
 		3672364417B04C280097E3F1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364217B04C280097E3F1 /* Entity.cpp */; };
 		3672364717B04CE30097E3F1 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3672364517B04CE20097E3F1 /* Component.cpp */; };
+		3682F82917C668A500F76158 /* TileMaterial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3682F82717C668A500F76158 /* TileMaterial.cpp */; };
+		3682F82C17C668AF00F76158 /* TileColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3682F82A17C668AF00F76158 /* TileColor.cpp */; };
+		3682F82F17C668C500F76158 /* Symbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3682F82D17C668C500F76158 /* Symbol.cpp */; };
 		3683432B17B28CD4006A8EFE /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432917B28CD4006A8EFE /* SceneManager.cpp */; };
 		3683432F17B29128006A8EFE /* GameplayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683432D17B29128006A8EFE /* GameplayLayer.cpp */; };
 		3683433217B2C062006A8EFE /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3683433017B2C061006A8EFE /* StateMachine.cpp */; };
@@ -867,6 +870,12 @@
 		3672364317B04C280097E3F1 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		3672364517B04CE20097E3F1 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		3672364617B04CE20097E3F1 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		3682F82717C668A500F76158 /* TileMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileMaterial.cpp; sourceTree = "<group>"; };
+		3682F82817C668A500F76158 /* TileMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMaterial.h; sourceTree = "<group>"; };
+		3682F82A17C668AF00F76158 /* TileColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileColor.cpp; sourceTree = "<group>"; };
+		3682F82B17C668AF00F76158 /* TileColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileColor.h; sourceTree = "<group>"; };
+		3682F82D17C668C500F76158 /* Symbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Symbol.cpp; sourceTree = "<group>"; };
+		3682F82E17C668C500F76158 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
 		3683432917B28CD4006A8EFE /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		3683432A17B28CD4006A8EFE /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		3683432C17B28D6E006A8EFE /* codebreaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = codebreaker.h; sourceTree = "<group>"; };
@@ -967,13 +976,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		364840C817B577DE002FD524 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cell;
-			sourceTree = "<group>";
-		};
 		3672327117B047230097E3F1 = {
 			isa = PBXGroup;
 			children = (
@@ -2189,14 +2191,26 @@
 			path = Classes/utils;
 			sourceTree = "<group>";
 		};
+		3682F82617C6683500F76158 /* tile */ = {
+			isa = PBXGroup;
+			children = (
+				3682F82717C668A500F76158 /* TileMaterial.cpp */,
+				3682F82817C668A500F76158 /* TileMaterial.h */,
+				3682F82A17C668AF00F76158 /* TileColor.cpp */,
+				3682F82B17C668AF00F76158 /* TileColor.h */,
+				3682F82D17C668C500F76158 /* Symbol.cpp */,
+				3682F82E17C668C500F76158 /* Symbol.h */,
+			);
+			path = tile;
+			sourceTree = "<group>";
+		};
 		3683432117B28C74006A8EFE /* components */ = {
 			isa = PBXGroup;
 			children = (
+				3683432617B28C74006A8EFE /* shared */,
 				3683432317B28C74006A8EFE /* main */,
 				3683432217B28C74006A8EFE /* board */,
-				364840C817B577DE002FD524 /* cell */,
-				3683432617B28C74006A8EFE /* shared */,
-				3683432717B28C74006A8EFE /* tile */,
+				3682F82617C6683500F76158 /* tile */,
 			);
 			name = components;
 			path = Classes/components;
@@ -2234,13 +2248,6 @@
 				364840D017B57B42002FD524 /* GameSpriteComponent.h */,
 			);
 			path = shared;
-			sourceTree = "<group>";
-		};
-		3683432717B28C74006A8EFE /* tile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tile;
 			sourceTree = "<group>";
 		};
 		3686F0D217BA9FE100532336 /* config */ = {
@@ -2657,6 +2664,9 @@
 				3695A43417C40978002FBF4E /* MainController.cpp in Sources */,
 				3695A43A17C40DB4002FBF4E /* EntityFactory.cpp in Sources */,
 				3695A43C17C40DBB002FBF4E /* EntityManager.cpp in Sources */,
+				3682F82917C668A500F76158 /* TileMaterial.cpp in Sources */,
+				3682F82C17C668AF00F76158 /* TileColor.cpp in Sources */,
+				3682F82F17C668C500F76158 /* Symbol.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

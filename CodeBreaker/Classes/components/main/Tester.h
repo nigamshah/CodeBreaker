@@ -16,16 +16,27 @@ namespace codebreaker {
 	using namespace cocos2d::extension;
 
 	class Tester {
-		
+
 	public:
 
 		bool init() {
 
-			for (int i = 0; i < 5; i++) {
-				int n = ServiceLocator::getRandomGenerator().getRandomInt(0, 9);
-			}
+			EntityManager::createEntity("tile", "testTile");
+
 			return true;
-			
+		}
+
+		void onSwitchScene(Message& msg) {
+			std::string sceneId = *(msg.getData<std::string*>());
+
+			if (sceneId.compare("gameplay") == 0) {
+				CCLog("gameplay!");
+
+			} else {
+				//
+				CCLog("sceneId = %s", sceneId.c_str());
+			}
+
 		}
 
 	};

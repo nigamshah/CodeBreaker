@@ -16,7 +16,7 @@ namespace codebreaker {
 	class RandomGenerator {
 
 	private:
-		std::default_random_engine* _generator;
+		std::default_random_engine _generator;
 		
 
 	public:

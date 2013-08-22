@@ -20,7 +20,7 @@ namespace codebreaker {
 	class Component : public cocos2d::CCObject {
 
 	protected:
-		Messenger* _messenger;
+		Messenger _messenger;
 
 		void _subscribe(std::string message, MessageHandler messageHandler, std::string handlerToken);
 		void _unsubscribe(std::string message, std::string handlerToken);

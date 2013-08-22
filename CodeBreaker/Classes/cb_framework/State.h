@@ -30,12 +30,6 @@ namespace codebreaker {
 			_triggerName = triggerName;
 		}
 
-		~StateTransition() {
-			_sourceState = nullptr;
-			_targetState = nullptr;
-			_triggerName = nullptr;
-		}
-
 		State* getSourceState() { return _sourceState; }
 		State* getTargetState() { return _targetState; }
 		std::string getTriggerName() { return _triggerName; }
@@ -44,18 +38,15 @@ namespace codebreaker {
 	
 	class State : public cocos2d::CCObject {
 	private:
-		std::map<std::string, StateTransition*> _transitions;
+		std::map<std::string, StateTransition> _transitions;
 
 	protected:
-		Messenger* _messenger;
+		Messenger _messenger;
 
 	public:
 
 		CC_SYNTHESIZE(std::string, _id, Id);
 		CC_SYNTHESIZE_READONLY(StateMachine*, _machine, Machine); // weak ref
-
-		State();
-		~State();
 
 		void setMachine(StateMachine* pMachine);
 		

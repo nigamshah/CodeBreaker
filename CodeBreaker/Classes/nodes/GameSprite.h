@@ -18,7 +18,6 @@ namespace codebreaker {
 		CC_SYNTHESIZE(Component*, _component, Component)
 
 		static GameSprite* gameSpriteWithFile(const char * pszFileName);
-
 		static GameSprite* gameSpriteWithSpriteFrame(CCSpriteFrame* pSpriteFrame);
 		static GameSprite* gameSpriteWithSpriteFrameName(const char * pszSpriteFrameName);
 
