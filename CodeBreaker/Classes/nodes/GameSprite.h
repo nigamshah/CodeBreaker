@@ -15,6 +15,7 @@ namespace codebreaker {
 	class GameSprite : public CCSprite {
 	public:
 
+		// weak
 		CC_SYNTHESIZE(Component*, _component, Component)
 
 		static GameSprite* gameSpriteWithFile(const char * pszFileName);

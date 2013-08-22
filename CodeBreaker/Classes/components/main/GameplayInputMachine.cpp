@@ -57,20 +57,6 @@ void InputStateReady::_onTouchBegan(Message& message) {
 	
 }
 
-
-//		// get location of touch as a CCPoint
-//		touchLocation = pTouch->getLocation();
-
-// iterate through the cells and determine which, if any cell was touched
-
-//		for (int p = 0; p < 2; p++) {
-//			player = (GameSprite *) _players->objectAtIndex(p);
-//			if (player->boundingBox().containsPoint(tap)) {
-//				player->setTouch(touch);
-//			}
-//		}
-
-
 void InputStateReady::onExit(Message& message) {
 	CCLog("InputStateReady.onExit %s", message.getName().c_str());
 	GameplayLayer* layer = static_cast<GameplayInputMachine*>(_machine)->getGameplayLayer();
