@@ -23,16 +23,29 @@ namespace codebreaker {
 	};
 
 	class TileMaterial : public GameSpriteComponent {
-		CC_SYNTHESIZE(TileMaterialType, _type, Type);
+
+	private:
+		static map<TileMaterialType, string> s_materialSpriteMap;
+
+		TileMaterialType _type;
+		void _setSprite();
+		void _colorize(Message& msg);
 
 	public:
-		virtual bool init() {
-			_type = TileMaterialType::Bronze;
-			return true;
+
+		CREATE_FUNC(TileMaterial);
+		~TileMaterial();
+		
+		virtual bool init();
+
+		TileMaterialType getType() { return _type; }
+
+		void setType(TileMaterialType value) {
+			_type = value;
+			_setSprite();
 		}
 
-		virtual void start() {
-		}
+
 
 	};
 }

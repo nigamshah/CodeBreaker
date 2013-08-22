@@ -22,6 +22,8 @@
 
 // tile
 #include "TileMaterial.h"
+#include "Symbol.h"
+#include "TileColor.h"
 
 using namespace codebreaker;
 
@@ -56,13 +58,9 @@ Entity* EntityFactory::createCellEntity(std::string eid) {
 Entity* EntityFactory::createTileEntity(std::string eid) {
 	Entity* ent = createBaseEntity(eid);
 	ent->addComponentToEntity(TileMaterial::create());
+	ent->addComponentToEntity(Symbol::create());
+	ent->addComponentToEntity(TileColor::create());
 	return ent;
 }
-
-
-
-
-
-
 
 
